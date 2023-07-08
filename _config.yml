@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Kyle Monette"
 title_separator          : "-"
 name                     : &name "Kyle Monette"
-avatar                   : "profile.png"
+avatar                   : "profile.jpg"
 description              : &description "personal description"
 url                      : https://kylemonette.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -82,7 +82,7 @@ analytics:
 # Site Author
 author:
   name             : "Kyle Monette"
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   bio              : "Mathematics Graduate Student"
   location         : "University of Rhode Island"
   employer         :
