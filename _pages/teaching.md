@@ -13,7 +13,7 @@ I served as instructor for the following courses at URI and was responsible for 
 
 <b>Fall 2023</b>
 
-MTH 103 Applied Precalculus (45 students)
+MTH 103 Applied Precalculus (45 students)<br/>
 [Excerpt of guided notes that I created for the course](/files/mth103-sample-notes.pdf)
 
 <b>Spring 2023</b>
