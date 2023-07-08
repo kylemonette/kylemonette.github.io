@@ -1,9 +1,9 @@
 # main links links
 main:
-  - title: "Research"
+  - title: "Research & Projects"
     url: /research/
 
-  - title: "Files"
+  - title: "Files & Talks"
     url: /files/    
 
   - title: "Teaching"
