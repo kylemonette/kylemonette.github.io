@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Talks and Files"
+title: "Files and Talks"
 permalink: /files/
 author_profile: true
 ---
