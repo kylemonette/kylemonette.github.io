@@ -11,3 +11,4 @@ author_profile: true
 "Secret Sharing Schemes" CS556 Project Clarkson University, 2022. [Slides](/files/cs556-slides.pdf), [project](/files/cs556-project.pdf)
 
 
+"Guassian Quadrature and Tridiagonal Matrices" MTH 472 University of Rhode Island, 2023. [Slides](/files/mth472-slides.pdf)
