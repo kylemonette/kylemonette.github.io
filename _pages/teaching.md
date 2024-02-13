@@ -11,32 +11,23 @@ author_profile: true
 
 I served as instructor for the following courses at URI and was responsible for lecture material, assessments, grading, and assisting students.
 
-<b>Spring 2024</b>
 
-MTH 103 Applied Precalculus (40 students)<br/>
+<b>MTH 103 Applied Precalculus</b>
+
+Spring 2024: 40 students
+Fall 2023: 45 students
+Spring 2023: 45 students
+Fall 2022: 45 students
+
 [Excerpt of guided notes that I created for the course](/files/mth103-sample-notes.pdf)
 
-<b>Fall 2023</b>
-
-MTH 103 Applied Precalculus (45 students)
-
-<b>Spring 2023</b>
-
-MTH 103 Applied Precalculus (42 students)
-
-<b>Fall 2022</b>
-
-MTH 103 Applied Precalculus (45 students)
+[YouTube Channel](https://www.youtube.com/channel/UCdEA3qbGCIjL1BaAgvO6GuQ) containing videos that I made for the course, including solutions to worksheets and walkthroughs of practice exams. Currently we have 8,200 views across 50 videos.
 
 
 ## Teaching Assistant
 
-I served as a teaching assistant for the following courses at URI.
+I served as a teaching assistant (hosted recitations) for the following courses at URI.
 
-<b>Spring 2023</b>
-
-MTH 101 Intermediate Algebra recitations
-
-<b>Fall 2022</b>
-
-MTH 101 Intermediate Algebra recitations
+<b>MTH 101 Intermediate Algebra</b>
+Spring 2023
+Fall 2022
