@@ -7,6 +7,8 @@ author_profile: true
 
 ## Presentations
 
+"GMRES - An Iterative Method for Solving Large Linear Systems", University of Rhode Island, 2024. [Slides](/files/mth590-slides.pdf)
+
 "Matrix Products Coinciding with Concatenation", MCCNNY Clarkson University, 2024. [Slides](/files/mccnny-2024.pdf)
 
 "Guassian Quadrature and Tridiagonal Matrices" MTH 472 University of Rhode Island, 2023. [Slides](/files/mth472-slides.pdf)
