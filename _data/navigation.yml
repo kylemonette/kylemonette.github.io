@@ -11,3 +11,6 @@ main:
     
   - title: "CV"
     url: /files/resume.pdf
+
+  - title: "Blog"
+    url: /year-archive
