@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Latex"
+title: "Latex for Hire"
 permalink: /latex/
 author_profile: true
 ---
