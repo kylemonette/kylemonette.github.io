@@ -16,7 +16,6 @@ I served as instructor for the following courses at URI and was responsible for 
 <li>Fall 2024: 45 students</li>
 </ul>
 
-</br>
 <b>MTH 103 Applied Precalculus</b>
 <ul>
 <li>Fall 2024: 45 students</li>
