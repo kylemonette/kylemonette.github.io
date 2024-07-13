@@ -13,22 +13,23 @@ I served as instructor for the following courses at URI and was responsible for 
 
 <b>MTH 131 Applied Calculus</b>
 
-Fall 2024: 45 students
-
+<ul>
+<li>Fall 2024: 45 students</li>
+</ul>
 
 
 <b>MTH 103 Applied Precalculus</b>
+<ul>
+<li>Fall 2024: 45 students</li>
 
-Fall 2024: 45 students
+<li>Spring 2024: 40 students</li>
 
-Spring 2024: 40 students
+<li>Fall 2023: 45 students</li>
 
-Fall 2023: 45 students
+<li>Spring 2023: 45 students</li>
 
-Spring 2023: 45 students
-
-Fall 2022: 45 students
-
+<li>Fall 2022: 45 students</li>
+</ul>
 
 [Excerpt of guided notes](/files/mth103-sample-notes.pdf) that I created for the course.
 
@@ -40,6 +41,7 @@ Fall 2022: 45 students
 I served as a teaching assistant (hosted recitations) for the following courses at URI.
 
 <b>MTH 101 Intermediate Algebra</b>
-
-Spring 2023
-Fall 2022
+<ul>
+<li>Spring 2023</li>
+<li>Fall 2022</li>
+</ul>
