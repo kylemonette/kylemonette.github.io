@@ -12,6 +12,9 @@ source "https://rubygems.org"
 # gem "github-pages", group: :jekyll_plugins
 
 gem "github-pages", "=228"
+gem "logger", "~> 1.6.0"
+gem "webrick"
+
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
