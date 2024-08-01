@@ -10,6 +10,10 @@ layout: compress
     {% include head.html %}
     {% include head/custom.html %}
     <script type="text/x-mathjax-config">
+      window.MathJax = {
+        loader: {load: ['[tex]/ams']},
+        tex: {packages: {'[+]': ['ams']}}
+      };
       MathJax.Hub.Config({
         TeX: {
           equationNumbers: { autoNumber: "AMS" },
@@ -33,10 +37,7 @@ layout: compress
           }
         });
       });
-      window.MathJax = {
-        loader: {load: ['[tex]/ams']},
-        tex: {packages: {'[+]': ['ams']}}
-      };
+      
     </script>
     <script type="text/javascript" charset="utf-8"
       src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
