@@ -15,19 +15,22 @@ layout: compress
     <script>
       MathJax = {
         tex: {
-          inlineMath: [['$', '$']]
+          inlineMath: [['$', '$'], ["\\(","\\)"]]
         }
       };
     </script>
     <script>
       MathJax = {
         tex: {
-          displayMath: [['\[', '\]']]
+          displayMath: [['\[', '\]'], ['$$','$$']]
         }
       };
     </script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});
+    </script>
+    <script type="text/javascript" charset="utf-8"
+    src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
     </script>
   </head>
 
