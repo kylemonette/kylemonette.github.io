@@ -13,13 +13,13 @@ I served as instructor for the following courses at URI and was responsible for 
 
 <b>MTH 131 Applied Calculus</b>
 <ul>
-<li> Fall 2024 </li>
+<li> Fall 2024: 45 students</li>
 </ul>
 
 
 <b>MTH 103 Applied Precalculus</b>
 <ul>
-<li> Fall 2024</li>
+<li> Fall 2024: 45 students</li>
 
 <li>Spring 2024: 40 students</li>
 
