@@ -81,16 +81,19 @@
   MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [ ['$$','$$'], ['\[','\]'] ],
+      displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
       processEscapes: true,
       processEnvironments: true,
       tags: 'ams',
       macros: {
-      RR: '{\\bf R}'
-    }
+        RR: '{\\bf R}'
+    },
+    environments: {
+      pbr: ['\\left(', '\\right\)']
     },
     svg: {
       fontCache: 'global'
+    }
     }
   };
 </script>
