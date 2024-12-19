@@ -80,10 +80,10 @@
 <script>
   MathJax = {
     loader: {
-      load: ['[tex]/newcommand']
+      load: ['[tex]/newcommand', '[tex]/mathtools']
     },
     tex: {
-      packages: {'[+]': ['newcommand']},
+      packages: {'[+]': ['newcommand'],'[+]': ['mathtools']},
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
       processEscapes: true,
