@@ -79,7 +79,11 @@
 
 <script>
   MathJax = {
+    loader: {
+      load: ['[tex]/newcommand']
+    },
     tex: {
+      packages: {'[+]': ['newcommand']},
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
       processEscapes: true,
