@@ -63,12 +63,16 @@
 <!-- <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "ams" } } }); </script> -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    tex: {
+    tex2jax: {
+      packages: {'[+]': ['enclose']},
       inlineMath: [ ['$','$'], ["\(","\)"] ],
       displayMath: [ ['$$','$$'], ["\[","\]"] ],
       processEscapes: true,
       processEnvironments: true,
       tags: 'ams',
+    }
+    macros: {
+      RR: '{\\bf R}'
     }
   });
 </script>
