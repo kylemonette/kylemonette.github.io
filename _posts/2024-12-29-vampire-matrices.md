@@ -13,13 +13,17 @@ On Halloween in 2020, Matt Parker of the YouTube Channel *Standup Maths* posted 
 3 & 4 \\\\ 6 & 8
 \rix^2 = 
 \mat{cc}
-33 & 44 \\\\ 66 && 88
-\rix, \qquad
+33 & 44 \\\\ 66 & 88
+\rix
+\\]
+
+\\[
 \mat{ccc}
 1 & 3 & 1 \\\\
 3 & 1 & 3 \\\\
 1 & 3 & 1
-\rix^2 = \mat{ccc}
+\rix^2 =
+\mat{ccc}
 11 & 33 & 11 \\\\
 33 & 11 & 33 \\\\
 11 & 33 & 11
