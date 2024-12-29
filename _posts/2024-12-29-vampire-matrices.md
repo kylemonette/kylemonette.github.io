@@ -20,12 +20,19 @@ and a $3\times 3$ example,
 \\[
 \mat{ccc}
 1 & 3 & 1 \\\\\\
-3 & 1 & 3 \\\\\\
+3 & 9 & 3 \\\\\\
 1 & 3 & 1
 \rix^2 =
 \mat{ccc}
 11 & 33 & 11 \\\\\\
-33 & 11 & 33 \\\\\\
+33 & 99 & 33 \\\\\\
 11 & 33 & 11
-\rix
-\\]
+\rix.
+\\] As Parker illustrates in his video, himself and a small group of other YouTube mathematicians noticed that these matrices satisfy the equation
+\\[
+A^2 = 11 A
+.\\]
+If we allow for two-digit integer entries (by this I mean *strictly* two-digit numbers to rule out things like $04$ which is really just $4$, a one digit number), then the matrix equation of interest becomes
+\\[
+A^2 = 101 A
+.\\]
