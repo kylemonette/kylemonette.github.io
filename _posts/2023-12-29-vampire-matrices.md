@@ -1,7 +1,7 @@
 ---
 title: 'Vampire Matrices'
-date: 2024-12-29
-permalink: /posts/2024/12/vampire-matrices/
+date: 2023-12-29
+permalink: /posts/2023/12/vampire-matrices/
 tags:
   - Vampire Matrices
 ---
