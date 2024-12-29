@@ -7,7 +7,7 @@ tags:
 ---
 
 
-On Halloween in 2020, Matt Parker of the YouTube Channel *Standup Maths* posted a [video](https://www.youtube.com/watch?v=9nogAYHmnNw) about *Vampire Matrices*. In this early definition of the term, Parker defined a (single) Vampire Matrix to be a square matrix consisting of positive integers such that the square of the matrix is equal to its element-wise concatenation. As an example,
+On Halloween in 2020, Matt Parker of the YouTube Channel *Standup Maths* posted a [video](https://www.youtube.com/watch?v=9nogAYHmnNw) about *Vampire Matrices*. In this early definition of the term, Parker defined a (single) Vampire Matrix to be a square matrix consisting of positive integers such that the square of the matrix is equal to its element-wise concatenation. As a $2\times 2$ example,
 \\[
 \mat{cc}
 3 & 4 \\\\ 6 & 8
@@ -16,7 +16,7 @@ On Halloween in 2020, Matt Parker of the YouTube Channel *Standup Maths* posted 
 33 & 44 \\\\ 66 & 88
 \rix
 \\]
-
+and a $3\times 3$ example,
 \\[
 \mat{ccc}
 1 & 3 & 1 \\\\
