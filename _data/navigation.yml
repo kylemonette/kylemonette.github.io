@@ -13,7 +13,7 @@ main:
     url: /files/resume.pdf
 
   - title: "Blog"
-    url: /year-archive
+    url: /blog
     
   - title: "LaTeX for Hire"
     url: /latex
