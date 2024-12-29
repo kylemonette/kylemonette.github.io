@@ -19,13 +19,13 @@ On Halloween in 2020, Matt Parker of the YouTube Channel *Standup Maths* posted 
 and a $3\times 3$ example,
 \\[
 \mat{ccc}
-1 & 3 & 1 \\\\
-3 & 1 & 3 \\\\
+1 & 3 & 1 \\
+3 & 1 & 3 \\
 1 & 3 & 1
 \rix^2 =
 \mat{ccc}
-11 & 33 & 11 \\\\
-33 & 11 & 33 \\\\
+11 & 33 & 11 \\
+33 & 11 & 33 \\
 11 & 33 & 11
 \rix
 \\]
