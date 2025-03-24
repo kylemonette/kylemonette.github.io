@@ -7,6 +7,8 @@ author_profile: true
 
 ## Presentations
 
+"Computing the Spectral Density", University of Rhode Island, 2025. [Slides](/files/spectral-density.pdf)
+
 "Gaussian Quadrature and Tridiagonal Matrices", University of Rhode Island, 2024. [Slides](/files/quadrature-tridiag.pdf)
 
 "GMRES - An Iterative Method for Solving Large Linear Systems", University of Rhode Island, 2024. [Slides](/files/mth590-slides.pdf)
