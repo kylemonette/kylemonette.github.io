@@ -16,5 +16,5 @@ redirect_from:
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
   <!-- {% include archive-single.html %} -->
-  { post.content | strip_html | truncatewords:75 }
+  {{ post.content | strip_html | truncatewords:75 }}
 {% endfor %}
