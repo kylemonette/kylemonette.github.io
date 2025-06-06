@@ -63,3 +63,15 @@ To clarify some things and make this development more rigorous, let's define som
 $\prod_{i=1}^k A_i \; = \; \sum_{i=1}^k 10^{d(k-i)} A_i$.</li>
 </ul>
 
+We have proven some elementary properties so far about matrices $A \in N_d^{n\times n}$ which satisfy the MCP <em>by themselves</em>. That is, the set of matrices is $\{A,A\}$ and so $A^2 = (10^d+1)A$.
+<ol>
+<li>Eigenvalues of $A$ are $0$ and $10^d+1$, with multiplicities $n-1$ and $1$, respectively. This means the trace of $A$ is $10^d+1$.</li>
+<li>Therefore, $A$ is singular. In fact, for these matrices to satisfy the MCP it is sufficient and necessary that $A$ is singular and has trace $10^d+1$. <em>In the case of two or more matrices satisfying the MCP, this biconditional statement is no longer true.</em></li>
+</ol>
+
+This project is a work in progress, and I welcome anyone interested in "joining it" to reach out to me! Here are some ideas I have on what to pursue:
+<ol>
+<li>Is there a size limit on the matrices for which $A^2 = (10^d+1)A$? We have found examples of size $n=2, 3, 4$.</li>
+<li>Can we think about solving the matrix equation in the MCP? That is, can we generate them in some manner?</li>
+<li>Are there matrices $B$ so that $\mathcal{A} = \{ A_1, \dots, A_k\}$ satisfies the MCP but $\mathcal{A} \cup B$ does not?</li>
+</ol>
