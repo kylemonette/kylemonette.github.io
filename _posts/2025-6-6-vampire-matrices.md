@@ -49,4 +49,18 @@ Here entries are one-digit integers and so the corresponding matrix equation is
 AB = 10A + B.
 \\end{equation}
 
-Now, we start to see the pattern. Equation \eqref{eq3} reduces to \eqref{eq1} if $A=B$. And in the last example if we allowed for two-digit integers, then \eqref{eq3} would be $AB = 100A + B$ and then becomes \eqref{eq2} in the special case when $A=B$.
+Now, we start to see the pattern. Equation \eqref{eq3} reduces to \eqref{eq1} if $A=B$. And in the last example if we had strictly two-digit integers in the matrices on the left-hand side, then \eqref{eq3} would be $AB = 100A + B$ and then becomes \eqref{eq2} in the special case when $A=B$.
+
+To clarify some things and make this development more rigorous, let's define some terms.
+
+<ul>
+<li>Let $N_d = \{n \in \mathbb{N} \mid n \text{ has exactly } d \text{ digits}\}$.</li>
+<ul>
+<li> For example, $N_1 = \{ 1, \dots, 9\}$ and $N_2 = \{10, \dots, 99\}$.
+<ul>
+<li>Let $N_d^{n \times n}$ be the set of $n\times n$ matrices with entries in $N_d$.</li>
+<li>A set of matrices $\{A_1, \dots, A_k\}$ is said to satisfy the *multiplication concatenation property* (MCP) if
+\\[
+\prod_{i=1}^k A_i \; = \; \sum_{i=1}^k 10^{d(k-i)} A_i.
+\\]
+</ul>
