@@ -63,7 +63,7 @@ To clarify some things and make this development more rigorous, let's define som
 $\prod_{i=1}^k A_i \; = \; \sum_{i=1}^k 10^{d(k-i)} A_i$.</li>
 </ul>
 
-We have proven some elementary properties so far about matrices $A \in N_d^{n\times n}$ which satisfy the MCP <em>by themselves</em>. That is, the set of matrices is $\{ A,A \}$ and so $A^2 = (10^d+1)A$.
+We have proven some elementary properties so far about matrices $A \in N_d^{n\times n}$ which satisfy the MCP <em>by themselves</em>. That is, the set of matrices is just $A_1=A_2=A$ so that $A^2 = (10^d+1)A$.
 <ol>
 <li>Eigenvalues of $A$ are $0$ and $10^d+1$, with multiplicities $n-1$ and $1$, respectively. This means the trace of $A$ is $10^d+1$.</li>
 <li>Therefore, $A$ is singular. In fact, for these matrices to satisfy the MCP it is sufficient and necessary that $A$ is singular and has trace $10^d+1$. <em>In the case of two or more matrices satisfying the MCP, this biconditional statement is no longer true.</em></li>
