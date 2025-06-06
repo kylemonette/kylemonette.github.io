@@ -8,7 +8,6 @@ tags:
 
 
 On Halloween in 2020, Matt Parker of the YouTube Channel *Standup Maths* posted a [video](https://www.youtube.com/watch?v=9nogAYHmnNw) about *Vampire Matrices*. In this early definition of the term, Parker defined a (single) Vampire Matrix to be a square matrix consisting of positive integers such that the square of the matrix is equal to its element-wise concatenation.
-<!--more-->
 As a $2\times 2$ example,
 \\[
 \mat{cc}
@@ -28,15 +27,20 @@ and a $3\times 3$ example,
 33 & 99 & 33 \\\\\\
 11 & 33 & 11
 \rix.
-\\] As Parker illustrates in his video, himself and a small group of other YouTube mathematicians noticed that these matrices satisfy the equation
-\\[
+\\] As Parker illustrates in his video, himself and other mathematicians on YouTube and Twitter noticed that these matrices satisfy the equation
+\\begin{equation}\label{eq1}
 A^2 = 11 A
-.\\]
+.\\end{equation}
 If we allow for two-digit integer entries (by this I mean *strictly* two-digit numbers to rule out things like $04$ which is really just $4$, a one digit number), then the matrix equation of interest becomes
-\\[
+\\begin{equation}\label{eq2}
 A^2 = 101 A
-.\\] One such matrix is
+.\\end{equation} One such matrix is
 \\[
 \mat{cc}
-60 & 30 \\\\ 82 & 41 \rix^2 = \mat{cc} 6060 & 3030 \\\\ 8282 & 4141 \rix
+60 & 30 \\\\ 82 & 41 \rix^2 = \mat{cc} 6060 & 3030 \\\\ 8282 & 4141 \rix.
+\\]
+
+Can we have a *pair of matrices* for which their product is equal to their element-wise concatenation? Yes! For example,
+\\[
+\mat{cc} 4 & 8 \\\\ 2 & 3 \rix \mat{cc} 8 & 8 \\\\ 2 & 7 \rix = \mat{cc} 48 & 88 \\\\ 22 & 37 \rix.
 \\]
