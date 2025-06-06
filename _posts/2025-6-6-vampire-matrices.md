@@ -1,13 +1,15 @@
 ---
 title: 'Vampire Matrices'
-date: 2024-12-29
-permalink: /posts/2024/12/vampire-matrices/
+date: 2025-6-6
+permalink: /posts/2025/6/vampire-matrices/
 tags:
   - Vampire Matrices
 ---
 
 
-On Halloween in 2020, Matt Parker of the YouTube Channel *Standup Maths* posted a [video](https://www.youtube.com/watch?v=9nogAYHmnNw) about *Vampire Matrices*. In this early definition of the term, Parker defined a (single) Vampire Matrix to be a square matrix consisting of positive integers such that the square of the matrix is equal to its element-wise concatenation. As a $2\times 2$ example,
+On Halloween in 2020, Matt Parker of the YouTube Channel *Standup Maths* posted a [video](https://www.youtube.com/watch?v=9nogAYHmnNw) about *Vampire Matrices*. In this early definition of the term, Parker defined a (single) Vampire Matrix to be a square matrix consisting of positive integers such that the square of the matrix is equal to its element-wise concatenation.
+<!--more-->
+As a $2\times 2$ example,
 \\[
 \mat{cc}
 3 & 4 \\\\ 6 & 8

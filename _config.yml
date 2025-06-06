@@ -314,3 +314,5 @@ compress_html:
 
 
 github: [metadata]
+
+excerpt_separator: <!--more-->
