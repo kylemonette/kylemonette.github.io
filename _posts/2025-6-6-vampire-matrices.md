@@ -31,7 +31,7 @@ and a $3\times 3$ example,
 \\begin{equation}\label{eq1}
 A^2 = 11 A
 .\\end{equation}
-If we allow for two-digit integer entries (by this I mean *strictly* two-digit numbers to rule out things like $04$ which is really just $4$, a one digit number), then the matrix equation of interest becomes
+If we allow for two-digit integer entries (by this I mean *strictly* two-digit numbers to rule out things like $04$ which is really just $4$, a one-digit number), then the matrix equation of interest becomes
 \\begin{equation}\label{eq2}
 A^2 = 101 A
 .\\end{equation} One such matrix is
@@ -44,3 +44,9 @@ Can we have a *pair of matrices* for which their product is equal to their eleme
 \\[
 \mat{cc} 4 & 8 \\\\ 2 & 3 \rix \mat{cc} 8 & 8 \\\\ 2 & 7 \rix = \mat{cc} 48 & 88 \\\\ 22 & 37 \rix.
 \\]
+Here entries are one-digit integers and so the corresponding matrix equation is
+\\begin{equation}\label{eq3}
+AB = 10A + B.
+\\end{equation}
+
+Now, we start to see the pattern. Equation \eqref{eq3} reduces to \eqref{eq1} if $A=B$. And in the last example if we allowed for two-digit integers, then \eqref{eq3} would be $AB = 100A + B$ and then becomes \eqref{eq2} in the special case when $A=B$.
