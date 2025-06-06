@@ -63,4 +63,5 @@ To clarify some things and make this development more rigorous, let's define som
 \\[
 \prod_{i=1}^k A_i \; = \; \sum_{i=1}^k 10^{d(k-i)} A_i.
 \\]
+</li>
 </ul>
