@@ -55,10 +55,10 @@ To clarify some things and make this development more rigorous, let's define som
 
 <ul>
 <li>Let $N_d = \{n \in \mathbb{N} \mid n \text{ has exactly } d \text{ digits}\}$.</li>
-<ul>
-<li> For example, $N_1 = \{ 1, \dots, 9\}$ and $N_2 = \{10, \dots, 99\}$.
-<ul>
+  <ul>
+  <li>For example, $N_1 = \{ 1, \dots, 9\}$ and $N_2 = \{10, \dots, 99\}$.
+  </ul>
 <li>Let $N_d^{n \times n}$ be the set of $n\times n$ matrices with entries in $N_d$.</li>
-<li>A set of matrices $\{A_1, \dots, A_k\}$ is said to satisfy the <em>multiplication concatenation property</em> (MCP) if
+<li>A set of matrices $\{A_1, \dots, A_k\}$ in $N_d^{n \times n}$ is said to satisfy the <em>multiplication concatenation property</em> (MCP) if
 $\prod_{i=1}^k A_i \; = \; \sum_{i=1}^k 10^{d(k-i)} A_i$.</li>
 </ul>
