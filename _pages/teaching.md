@@ -11,9 +11,16 @@ author_profile: true
 
 I served as instructor for the following courses at URI and was responsible for lecture material, assessments, grading, and assisting students.
 
+<b>MTH 215 Linear Algebra</b> (A non-coordinated course)
+<ul>
+<li> Spring 2026
+</ul>
+
 <b>MTH 141 Calculus I</b>
 <ul>
 <li>Spring 2025: 40 students</li>
+
+<li>Fall 2025: 40 students</li>
 </ul>
 
 <b>MTH 131 Applied Calculus</b>
