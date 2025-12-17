@@ -13,7 +13,7 @@ I served as instructor for the following courses at URI and was responsible for 
 
 <b>MTH 215 Linear Algebra</b> (A non-coordinated course)
 <ul>
-<li> Spring 2026
+<li> Spring 2026</li>
 </ul>
 
 <b>MTH 141 Calculus I</b>
