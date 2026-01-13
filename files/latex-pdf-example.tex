@@ -1,0 +1,143 @@
+\DocumentMetadata{
+  tagging = on,
+  lang = en,
+  pdfstandard = ua-2,
+  tagging-setup = {math/setup={mathml-AF,mathml-SE},
+extra-modules={verbatim-mo}}
+}
+
+\documentclass{article}
+
+\usepackage{unicode-math}
+\usepackage{tabularx,float,enumerate,graphicx}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=blue,
+	filecolor=blue,
+	linkcolor=blue,
+	urlcolor=blue,
+    pdftitle = {Example of Accessibility},
+    pdfauthor = {Kyle Monette},
+    pdfdisplaydoctitle = true,
+    pdfkeywords = {example,latex,pdf}
+}
+
+\usepackage{verbatim}
+\usepackage{pgfplots,tikz,pdfcomment}
+
+
+
+\begin{document}
+
+\begin{center}
+{\Large\sc Creating Accessible PDF Files from LaTeX}
+\medskip
+
+{\Large\sc Examples of Tables, Images, and Plots}
+\bigskip
+
+{\large Prepared by: Kyle Monette}
+\end{center} 
+\noindent\hrule
+
+\vspace{2em}
+
+This is an example of a table with the ``presentation'' tag, because there is no header and the point of using tabular in this case is to nicely display the information.
+
+\tagpdfsetup{table/tagging=presentation}
+\begin{table}[H]
+\centering
+\begin{tabular}{l|rl} 
+Exam 1 & 100 points & (16.67\%)\\
+Exam 2 & 100 points & (16.67\%)\\ 
+Exam 3 & 100 points & (16.67\%)\\ 
+Final Exam & 150 points & (25\%)\\
+Edfinity Homework & 75 points & (12.5\%)\\ 
+Classwork & 75 points & (12.5\%) \\ \hline\hline
+\textbf{Total} & \textbf{600 points} & \\
+\end{tabular}
+\end{table}
+
+
+On the other hand, this is a table with the first row marked as a header. This allows an HTML conversion to properly format the first row. It does not seem to make an audible difference during screen reading, however, when compared to the table above.
+
+\tagpdfsetup{table/header-rows={1}}
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|p{5.5cm}|p{8cm}|}\hline
+\textsc{Week} & \textsc{Sections Covered} & \textsc{Events}\\\hline\hline
+
+1/19 & \S 1.1 \newline \S 1.2 & Classes begin Wednesday 1/21 \\\hline
+
+1/26 & \S 1.3 \newline \S 1.4 \newline \S 1.5 & \\\hline
+\end{tabular}
+\end{table}
+
+
+This is an example of an image. The alternative text will be read during screen reading. Note the use of the ``H'' placement key in the figures and tables. Experience has shown that when no placements are provided, or when a more standard placement like \verb|[htbp]| is used, the figure (or table) may not be read in the correct order in the document.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4,alt={A picture of a line graph with an upward trend with numbers behind it}]{math-pic}
+\end{figure}
+
+In the following, a caption is passed to the figure. A simple rule from the graphicx package is that the caption must be the very first or very last line in the figure environment. After some testing, it appears that the caption is always read before the alternative text.
+
+\begin{figure}[H]
+\centering
+\caption{Look at this cool caption!}
+\includegraphics[scale=0.4,alt={Different alternative text, and a caption}]{math-pic}
+\end{figure}
+
+In the next figure, the ``artifact'' key is passed. This is only for decorative images, and it will be excluded from the tags. It is unclear if the ``artifact'' option is actually useful---wouldn't all images benefit from alternative text?
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4,artifact]{math-pic}
+\end{figure}
+
+
+Lastly, our same image again but with the ``actualtext'' option. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4,actualtext={My text}]{math-pic}
+\end{figure}
+
+On Brightspace, you can test your PDF file's ability to be screen read by opening the file and clicking the speaker icon at the top. Clicking ``listen'' at the top will play the file. By clicking the menu icon at the top right and choosing ``Text Mode'', the PDF file is displayed \textit{as if} it was an HTML document (essentially). See the screenshot below.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3,alt={Information about Brightspace screen reader}]{preview}
+\caption{Illustrating the ``Text Mode'' feature of the Brightspace screen reader.}
+\end{figure} 
+
+
+Not only does this show if your tagging worked (e.g., if your table is not being parsed correctly), but also clearly illustrates what the ``actualtext'' option in figures does.
+
+
+\bigskip
+
+For those of us that create graphs in tikz and pgfplots, it is possible to add alternative text to those as well directly to the tikzpicture enrivonment.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.8,alt={A graph of a quadratic function in the plane}]
+\begin{axis}[grid=none,
+axis lines=middle,
+xmin=-2,xmax=2,
+ymin=-2,ymax=2,
+xtick=\empty,
+ytick=\empty,
+minor tick={},
+samples=250]
+\addplot[domain=-2:2,thick] {x^2};
+\end{axis}
+\end{tikzpicture}
+\end{figure} 
+
+
+\end{document} 
