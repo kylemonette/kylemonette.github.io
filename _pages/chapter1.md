@@ -7,7 +7,7 @@ author_profile: true
 
 ## Interests
 
-I am interested in topics in numerical linear algebra, primarily in Krylov subspace methods. Initially we were interested in augmentation and restarting methods for GMRES, and have recently been switching to the symmetric eigenvalue problem and SVD computations. In the future, we hope to dip more into the randomized NLA algorithms that are in the spotlight right now.
+\[ A^2 = \span\cbr{4}\]
 
 ## Project: Vampire Matrices
 
