@@ -33,7 +33,7 @@ $$
 \rix}
 $$
 
-$\cA \Min_2 \Dim \cbr{t^2}$
+$\cA \Min_2 \Dim \cbr{t^2} \CC $
 
 ## Project: Vampire Matrices
 
