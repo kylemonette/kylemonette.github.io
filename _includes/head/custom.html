@@ -77,6 +77,9 @@
 </script> -->
 <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
 
+<script type="text/x-mathjax-macros">
+    \newcommand{\CC}{\mathbf{C}}
+</script>
 <script>
   MathJax = {
     loader: {
@@ -144,6 +147,13 @@
     svg: {
       fontCache: 'global'
     }
+    },
+    startup: {
+      ready () {
+        MathJax.startup.defaultReady();
+        const definitions = document.head.querySelector('[type="text/x-mathjax-macros"]');
+        MathJax.tex2mml(definitions.textContent);
+      }
     }
   };
 </script>
