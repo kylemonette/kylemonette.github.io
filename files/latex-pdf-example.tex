@@ -1,14 +1,15 @@
 \DocumentMetadata{
-  tagging = on,
+  tagging=on,
   lang = en,
   pdfstandard = ua-2,
-  tagging-setup = {math/setup={mathml-AF,mathml-SE},
-extra-modules={verbatim-mo}}
+  tagging-setup={math/setup=mathml-SE, math/alt/use, page/exclude-header-footer}
 }
 
 \documentclass{article}
 
-\usepackage{unicode-math}
+% COMMENT this for pdflatex,  UNCOMMENT for lualatex
+% \usepackage{unicode-math} 
+
 \usepackage{tabularx,float,enumerate,graphicx}
 
 \usepackage[margin=1in]{geometry}
