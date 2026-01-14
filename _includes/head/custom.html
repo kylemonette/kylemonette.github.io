@@ -79,14 +79,16 @@
 
 <script type="text/x-mathjax-macros">
     \newcommand{\CC}{\mathbf{C}}
+    \newcommand*\eq[1][=]{\quad #1 \quad}
+    \newcommand{\soln}{\noindent\textcolor{red}{\bf Solution:}\hspace{0.5em}}
 </script>
 <script>
   MathJax = {
     loader: {
-      load: ['[tex]/newcommand', '[tex]/mathtools']
+      load: ['[tex]/newcommand', '[tex]/mathtools', '[tex]/color']
     },
     tex: {
-      packages: {'[+]': ['newcommand'],'[+]': ['mathtools']},
+      packages: {'[+]': ['newcommand'],'[+]': ['mathtools'], '[+]': ['color']},
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
       processEscapes: true,
