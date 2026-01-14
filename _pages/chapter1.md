@@ -19,9 +19,7 @@ $$ 5x^2 \int \frac{1}{2} \text{double dollar} $$
 
 The matrix $\mat{cc}3 & 4 \\\ 6 & 8 \rix^2$ is inline
 
-$$\mat{cc}
-3 & 4 \\ 6 & 8
-\rix^2$$
+$$\mat{cc} 3 & 4 \\ 6 & 8 \rix^2$$
 
 $$
 \mat{ccc}
