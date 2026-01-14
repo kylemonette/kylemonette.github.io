@@ -7,7 +7,11 @@ author_profile: true
 
 ## Interests
 
-\[ A^2 = \span\cbr{4}\]
+\\[ A^2 = \\span \\cbr{4}\\]
+
+\\[ 5x^2 \\]
+
+$5x^2$
 
 ## Project: Vampire Matrices
 
