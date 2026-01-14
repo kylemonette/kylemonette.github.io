@@ -11,7 +11,11 @@ author_profile: true
 
 \\[ 5x^2 \\]
 
-$5x^2$
+$5x^2 \int$
+
+$$ 5x^2 \int \frac{1}{2} \text{double dollar} $$
+
+
 
 ## Project: Vampire Matrices
 
