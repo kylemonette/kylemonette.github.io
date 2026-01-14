@@ -18,11 +18,10 @@ $$ 5x^2 \int \frac{1}{2} \text{double dollar} $$
 \[ 6x^2 \span{t} \]
 
 $\mat{cc}
-3 & 4 \\ 6 & 8
+3 & 4 \\\\ 6 & 8
 \rix^2$
 
-$$
-\mat{cc}
+$$\mat{cc}
 3 & 4 \\\\ 6 & 8
 \rix^2$$
 
