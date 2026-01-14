@@ -19,14 +19,18 @@ $$ 5x^2 \int \frac{1}{2} \text{double dollar} $$
 
 The matrix $\mat{cc}3 & 4 \\\ 6 & 8 \rix^2$ is inline
 
+Another $\mat{cc} 3 & 4 \\ 6 & 8 \rix^2$ is inline
+
+
 $$\mat{cc} 3 & 4 \\ 6 & 8 \rix^2$$
 
 $$
+\pbr{
 \mat{ccc}
 11 & 33 & 11 \\
 33 & 99 & 33 \\
 11 & 33 & 11
-\rix
+\rix}
 $$
 
 ## Project: Vampire Matrices
