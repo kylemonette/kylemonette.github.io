@@ -78,7 +78,6 @@
 <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
 
 <script type="text/x-mathjax-macros">
-    \newcommand{\CC}{\mathbf{C}}
     \newcommand{\eq}[1][=]{\quad #1 \quad}
     \newcommand{\soln}{\textcolor{red}{\bf Solution:}\hspace{0.5em}}
     \let\implies\Rightarrow
@@ -92,6 +91,9 @@
     \DeclarePairedDelimiter{\pbr}{(}{)}
     \DeclarePairedDelimiter\sbr{[}{]}
     \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+    \addtolength{\jot}{0.5em}
+    \newcommand{\REF}{\text{REF}\xspace}
+    \newcommand{\RREF}{\text{RREF}\xspace}
 </script>
 <script>
   MathJax = {
@@ -135,11 +137,6 @@
         cX: '\\mathcal{X}',
         cY: '\\mathcal{Y}',
         cZ: '\\mathcal{Z}',
-        pbr: ['\\left( #1 \\right)',1],
-        cbr: ['\\left\\{ #1 \\right\\}',1],
-        sbr: ['\\left[ #1 \\right]',1],
-        abs: ['\\left\\lvert #1 \\right\\rvert',1],
-        norm: ['\\left\\lVert #1 \\right\\rVert',1],
         mat: ['\\left[\\begin{array}{#1}',1],
         rix: ['\\end{array}\\right]'],
         vmat: ['\\left\\lvert\\begin{array}{#1}',1],
@@ -152,7 +149,8 @@
         Col: ['\\operatorname{Col}'],
         Rank: ['\\operatorname{rank}'],
         Det: ['\\operatorname{det}'],
-        Range: ['\\operatorname{Range}']
+        Range: ['\\operatorname{Range}'],
+        Row: ['\\operatorname{Row}']
     },
     environments: {
       
