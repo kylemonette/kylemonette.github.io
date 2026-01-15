@@ -582,7 +582,7 @@ Start by row reducing the augmented matrix to a triangular form:
 .\]
 (They were augmented matrices, but the following applies to any matrix.)
 </br>
-In this section, we describe a procedure for “reducing'' matrices to this desired form.</p>
+In this section, we describe a procedure for “reducing” matrices to this desired form.</p>
 
 
 <div class="definition" data-title="(Row Echelon Form)">
@@ -694,7 +694,7 @@ Every matrix is row equivalent to only one reduced row echelon matrix.
 </div>
 
 
-<div class="definition" data-text="(Pivots and Pivot Columns)">
+<div class="definition" data-title="(Pivots and Pivot Columns)">
 <ul>
 <li>A <i>pivot position</i> is a location of a leading entry in a $\REF$ of a matrix.</li>
 <li>A <i>pivot</i> is nonzero number in a pivot position used to create zeros via row operations.</li>
@@ -766,9 +766,9 @@ A=\mat{rrrrr}
 \rix \\
 & \qquad & \quad &
 \mat{rrrrr}
-\colorbox{magenta!20}{1} & 4 & 5 & -9 & -7 \\
-0 & \colorbox{magenta!20}{2} & 4 & -6 & -6 \\
-0 & 0 & 0 & \colorbox{magenta!20}{-5} & 0 \\
+1 & 4 & 5 & -9 & -7 \\
+0 & 2 & 4 & -6 & -6 \\
+0 & 0 & 0 & -5 & 0 \\
 0 & 0 & 0 & 0 & 0 \\
 \rix
 \end{align*}
@@ -847,7 +847,7 @@ Because columns 1 and 2 have pivots, and column 3 does not, then
 \[
 x_1 \text{ and } x_2: \hspace{8em} \qquad x_3: \hspace{9em}
 .\] 
-Now, we can solve for the \textit{basic} variables in terms of the \textit{free} variables:
+Now, we can solve for the <i>basic</i> variables in terms of the <i>free</i> variables:
 \[
 \begin{array}{rcrcrcrc}
 x_1 & &   &-& 5x_3 &=& 1 \\
@@ -886,9 +886,9 @@ Basic columns are:
 </br>
 Nonbasic columns are: 
 </br>
-The \RREF gives the following system of equations:
+The $\RREF$ gives the following system of equations:
 
-<div style="margin-bottom: 10em;"></div>
+<div style="margin-bottom: 7em;"></div>
 
 
 The basic variables in terms of the free variables are:
@@ -903,7 +903,7 @@ x_5 &=
 
 
 
-<p class="no-indent">Even though the \REF is insufficient to <i>solve</i> a linear system, it does answer if the system is <i>consistent</i> or not (and, how many solutions there are, if any).</p>
+<p class="no-indent">Even though the $\REF$ is insufficient to <i>solve</i> a linear system, it does answer if the system is <i>consistent</i> or not (and, how many solutions there are, if any).</p>
 
 <div class="example">
 Determine the existence and uniqueness of solutions to the systems with augmented matrices:
@@ -944,6 +944,8 @@ If a linear system is consistent, then the solution set contains either:
 Think about it!
 </p>
 
+<div style="margin-bottom: 5em;"></div>
+
 <p class="no-indent"> In summary: To solve a linear system, use the following procedure.
 
 
@@ -968,15 +970,15 @@ Think about it!
 Answer the following. Be sure that you can fully explain your work!
 <ol>
 <li>What is the largest possible number of pivots a $4\times 6$ matrix can have?</li>
-<div style="margin-bottom: 10em;"></div>
+<div style="margin-bottom: 5em;"></div>
 
 <li>What is the largest possible number of pivots a $6\times 4$ matrix can have?</li>
 
-<div style="margin-bottom: 10em;"></div>
+<div style="margin-bottom: 5em;"></div>
 
 <li>A consistent linear system has $3$ equations and $4$ unknowns. How many solutions does it have?</li>
 
-<div style="margin-bottom: 10em;"></div>
+<div style="margin-bottom: 5em;"></div>
 
 <li>Suppose the coefficient matrix corresponding to a linear system is $4\times 6$ with $3$ pivot columns. How many pivot columns does the augmented matrix have, if the linear system is inconsistent?</li>
 </ol>
