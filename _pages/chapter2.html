@@ -25,6 +25,14 @@ author_profile: false
         display: flex;
         margin: 20px 0;
     }
+    table.plain {
+        border: none;
+        border-collapse: collapse;
+    }
+    table.plain td {
+        border: none;
+        padding: 10px;
+    }
     .theorem, .definition, .lemma, .example, .proposition, .result {
         counter-increment: theorem-counter;
         font-style: normal;
@@ -216,25 +224,24 @@ The <i>solution set</i> of the linear system is all possible solutions.
 </div>
 
 
-<p>Nonlinear equations like $4x_1-6x_2=x_1x_2$ or $x_2 = 2 \sqrt{x_1} + 5$ are not our interest!</p>
+<p class="no-indent">Nonlinear equations like $4x_1-6x_2=x_1x_2$ or $x_2 = 2 \sqrt{x_1} + 5$ are not our interest!</p>
 
 
-<p>For example --- the above solution set is only $x_1=3, x_2 = 2$. Can solution sets be larger? Can no solutions exist? Infinitely many?</p>
+<p class="no-indent">For example -- the above solution set is only $x_1=3, x_2 = 2$. Can solution sets be larger? Can no solutions exist? Infinitely many?</p>
 
-<p>From our knowledge of linear equations, what are other possibilities for the solution set?</p>
-
-
-<p>Consider slight variations of the linear system above:</p>
+<p class="no-indent">From our knowledge of linear equations, what are other possibilities for the solution set?</p>
 
 
-<!-- \noindent 
-\begin{minipage}{0.5\textwidth}
+<p class="no-indent">Consider slight variations of the linear system above:</p>
+
+<p>
 \begin{align*}
 x_1 - 2x_2 & = -1 && (L_1) \\
 -x_1+2x_2 & = 3 && (L_2)
 \end{align*}
+</p>
 
-\begin{tikzpicture}[scale=0.8]
+<!-- \begin{tikzpicture}[scale=0.8]
 \begin{axis}[grid=none,
 axis lines=middle,
 xmin=-4,xmax=4,
@@ -247,19 +254,18 @@ samples=250]
 \addplot[domain=-4:4,thick,red] {(-1-x)/-2} node[pos=0.2,below,sloped] {$L_1$};
 \addplot[domain=-4:4,thick,blue] {(3+x)/2} node[pos=0.2,above,sloped] {$L_2$};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture} -->
 
-\sol[1em]{No solutions!}
+<!-- \sol[1em]{No solutions!} -->
 
-\end{minipage} 
-\hfill
-\begin{minipage}{0.5\textwidth}
+<p>
 \begin{align*}
 x_1 - 2x_2 & = -1 && (L_1) \\
 -x_1+2x_2 & = 1 && (L_2)
 \end{align*}
+</p>
 
-\begin{tikzpicture}[scale=0.8]
+<!-- \begin{tikzpicture}[scale=0.8]
 \begin{axis}[grid=none,
 axis lines=middle,
 xmin=-4,xmax=4,
@@ -272,46 +278,34 @@ samples=250]
 \addplot[domain=-4:4 ,thick] {(-1-x)/-2} node[pos=0.2,below,sloped] {$L_1$};
 \addplot[domain=-4:4,thick] {(1+x)/2} node[pos=0.2,above,sloped] {$L_2$};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture} -->
 
-\sol[1em]{Infinitely many solutions!}
+<!-- \sol[1em]{Infinitely many solutions!} -->
 
-\end{minipage} 
 
-\medskip
-
-\res
+<div class="result">
 A linear system can have either:
-\begin{enumerate}
-\item One solution.
-\item Infinitely many solutions.
-\item No solutions.
-\end{enumerate}
+<ol>
+<li>One solution.</li>
+<li>Infinitely many solutions.</li>
+<li>No solutions.</li>
+</ol>
 
-The system is called {\bf consistent} if one or infinitely many solutions exist; {\bf inconsistent} if no solutions exist.
-\overres
+The system is called <b>consistent</b> if one or infinitely many solutions exist; <b>inconsistent</b> if no solutions exist.
+</div>
 
-A major goal of this class is to classify a linear system as consistent or inconsistent. And, to say how many solutions there are (if any).
-
-
-\newpage
+<p>A major goal of this class is to classify a linear system as consistent or inconsistent. And, to say how many solutions there are (if any).</p>
 
 
-The two-variable systems above are easy --- what about more variables?
-\[
-% \begin{array}{rcrcrcr}
-% x_1 &-& 2x_2 &+& x_3 &=& 0 \\
-% && 2x_2 &-& 8x_3 &=& 8 \\
-% 5x_1 &&  &-& 5x_3 &=& 10 
-% \end{array} 
-% \quad \xleftrightarrow[\text{\footnotesize (Will show later)}]{\text{\normalsize Solution is equal!} } \quad
-% \xleftrightarrow{\text{\normalsize Solution is equal!} } 
+<p>The two-variable systems above are easy --- what about more variables?</p>
+
+<p>\[
 \begin{array}{rcrcrcr}
 x_1 &-& 2x_2 &+& x_3 &=& 0 \\
 && x_2 &-& 4x_3 &=& 4 \\
 && && x_3 &=& -1 
 \end{array} 
-\] 
+\]</br>
 Working from the bottom upwards:
 \[
 \begin{array}{ccclcl}
@@ -319,44 +313,31 @@ x_3 &= -1 & \qquad\qquad\qquad x_2 & = \sol{4 + 4x_3} & \qquad\qquad\qquad\qquad
 & & &= \sol{4-4} & & = \sol{2\cdot 0 + 1} \\[1em]
 & & &= \sol{0} & & = \sol{1} 
 \end{array} 
-\] 
-% \[
-% x_3 = -1 \eq[\implies ] x_2 + 4 = 4 \eq [\implies ] x_2=0 \eq [\implies ] x_1 -1=0 \eq[\implies ] x_1=1
-% .\] 
-\medskip
+\]</p>
 
-\noindent The solution set is: \quad $(x_1,x_2,x_3) = \sol{(1,0,-1)}$
+<!-- <p>The solution set is: \quad $(x_1,x_2,x_3) = \sol{(1,0,-1)}$</p> -->
 
 
-\bigskip
+<div class="definition" data-title="Equivalent Linear Systems">
+Two linear systems are called <i>equivalent</i> if their solution sets are equal.
+</div>
+
+<p class="noindent">Therefore, we'll convert “hard to solve” systems into <b>equivalent</b> but “easy to solve” systems.</p>
 
 
-\defn[Equivalent Linear Systems]
-Two linear systems are called {\it equivalent} if their solution sets are equal.
-\overdefn
+<p>To do so, it's helpful to store only the essential information of a system.
+The coefficients of the variables are stored in a <b>coefficient matrix</b>, and the known values (often appearing on the right-hand side) form the last column in the <b>augmented matrix</b>.</p>
 
-\bigskip
-
-\noindent
-Therefore, we'll convert ``hard to solve'' systems into {\bf equivalent} but ``easy to solve'' systems.
-
-
-\medskip
-
-To do so, it's helpful to store only the essential information of a system.
-The coefficients of the variables are stored in a {\bf coefficient matrix}, and the known values (often appearing on the right-hand side) form the last column in the {\bf augmented matrix}.
-
-For example, in this linear system, we have the following matrices:
-
+<p>For example, in this linear system, we have the following matrices:
 \[
 \begin{array}{rcrcrcr}
 x_1 &-& 2x_2 &+& x_3 &=& 0 \\
 && 2x_2 &-& 8x_3 &=& 8 \\
 5x_1 &&  &-& 5x_3 &=& 10 
 \end{array}
-\]
+\]</p>
 
-\begin{instructor}
+<!-- \begin{instructor}
 \vspace{2em}
 \[
 \mat{crr}
@@ -371,81 +352,46 @@ x_1 &-& 2x_2 &+& x_3 &=& 0 \\
 5 & 0 & -5 & 10
 \rix
 .\] 
-\end{instructor} 
+\end{instructor}  -->
 
 
-% \noindent 
-% % \begin{tabularx}{\linewidth}{XXX}
-% \begin{tabular}{p{7cm}p{4cm}p{4cm}}
-% System & Coefficient Matrix & Augmented Matrix \\ [1em]
-% $\begin{array}{rcrcrcr}
-% x_1 &-& 2x_2 &+& x_3 &=& 0 \\
-% && 2x_2 &-& 8x_3 &=& 8 \\
-% 5x_1 &&  &-& 5x_3 &=& 10 
-% \end{array}$
-% & 
-% $ 
-% \mat{crr}
-% 1 & -2 & 1 \\
-% 0 & 2 & -8 \\
-% 5 & 0 & -5
-% \rix
-% $
-% &  
-% $
-% \mat{crr|c}
-% 1 & -2 & 1 & 0 \\
-% 0 & 2 & -8 & 8 \\
-% 5 & 0 & -5 & 10
-% \rix$ \\
-% \end{tabular}
+<p class="no-indent">The <b>size</b> of a matrix is: (number of rows) $\times $ (number of columns).</br>For example:</p>
 
-
-\newpage
-
-\noindent The {\bf size} of a matrix is: \quad (number of rows) $\times $ (number of columns).
-
-\noindent For example:
-
-\bigskip
-
-\noindent 
-\begin{tabular}{cccc}
+<table class="plain">
+<tr>
+<td>
 $\mat{crr}
 1 & -2 & 1 \\
 0 & 2 & -8 \\
 5 & 0 & -5
 \rix$
-\quad
-&
-\quad
+</td>
+<td>
 $
 \mat{crr|c}
 1 & -2 & 1 & 0 \\
 0 & 2 & -8 & 8 \\
 5 & 0 & -5 & 10
 \rix$ 
-\quad
-&
-\quad
+</td>
+<td>
 $\mat{rr}
 1 & 0 \\ -5 & 8
 \rix$
-\quad
-&
-\quad
+</td>
+<td>
 $\mat{rrr|r}
 1 & 2 & 3 & 4 \\
 5 & 6 & 7 & 8
 \rix$
-\\ [2em]
+</td>
+</tr>
+</table>
 
-$3\times 3$ & $3\times 4$ & \quad $2\times 2$ & \quad $2\times 4$ 
-\end{tabular}
+<!-- $3\times 3$ & $3\times 4$ & \quad $2\times 2$ & \quad $2\times 4$  -->
 
-\bigskip
 
-\noindent Therefore, a system of $m$ equations with $n$ unknowns is associated to:
+<!-- \noindent Therefore, a system of $m$ equations with $n$ unknowns is associated to:
 
 \begin{itemize}
 \item a coefficient matrix of size: \quad \sol{$m\times n$} 
@@ -743,9 +689,8 @@ Any value of $x_1$ and $x_2$ satisfy the second equation $0\cdot x_1 + 0\cdot x_
 
 So when $h= -\frac{8}{3}$ there are infinitely many solutions!
 
-\end{instructor}
+\end{instructor} -->
 
-\overexm -->
 
 
 
