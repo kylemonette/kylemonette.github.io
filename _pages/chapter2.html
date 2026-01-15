@@ -33,10 +33,8 @@ author_profile: false
         border: none;
         padding: 10px;
     }
-    /* Increase spacing in align environments */
-    mjx-mtable[displaystyle="true"] mjx-mtr {
-        padding-top: 0.3em;
-        padding-bottom: 0.3em;
+    mjx-mtd {
+        padding-block: 0.5em !important;
     }
     .theorem, .definition, .lemma, .example, .proposition, .result {
         counter-increment: theorem-counter;
@@ -630,10 +628,7 @@ For what values of $h$ is the system consistent? For those values of $h$, how ma
 \end{array} 
 .\] 
 
-
-Start by row reducing the augmented matrix to a triangular form: $\RREF$ is
-
-$\iff \epsilon \implies \soln $
+Start by row reducing the augmented matrix to a triangular form:
 
 <!-- \begin{instructor}
 \[
