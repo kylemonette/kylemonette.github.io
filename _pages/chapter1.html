@@ -17,6 +17,7 @@ author_profile: false
         box-shadow: none;
         border: none;
         counter-reset: theorem-counter;
+        margin-left: 280px;
     }
     .author {
         font-size: 1.5em;
@@ -155,6 +156,59 @@ author_profile: false
     a.ref:hover {
         text-decoration: underline;
     }
+    nav.toc {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        overflow-y: auto;
+        background-color: #f5f5f5;
+        border-right: 1px solid #ddd;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    nav.toc h2 {
+        font-size: 1.2em;
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #333;
+    }
+    
+    nav.toc ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav.toc li {
+        margin-bottom: 10px;
+    }
+    
+    nav.toc a {
+        color: #0066cc;
+        text-decoration: none;
+        display: block;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+    }
+    
+    nav.toc a:hover {
+        background-color: #e0e0e0;
+    }
+    
+    nav.toc a.active {
+        background-color: #0066cc;
+        color: white;
+        font-weight: bold;
+    }
+    
+    /* Adjust header to not overlap with sidebar */
+    header {
+        margin-left: 0;
+    }
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -166,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
             theoremNumbers.set(el.id, index + 1);
         }
     });
-    
+
     document.querySelectorAll('a.ref').forEach(ref => {
         const targetId = ref.getAttribute('href').substring(1);
         if (theoremNumbers.has(targetId)) {
@@ -176,6 +230,32 @@ document.addEventListener('DOMContentLoaded', function() {
             ref.textContent = `${typeName} ${number}`;
         }
     });
+    // Highlight active section in navigation
+    const sections = document.querySelectorAll('h2[id]');
+    const navLinks = document.querySelectorAll('nav.toc a');
+    
+    function highlightActiveSection() {
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const scrollPosition = window.scrollY + 100; // Offset for better UX
+            
+            if (scrollPosition >= sectionTop) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + currentSection) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', highlightActiveSection);
+    highlightActiveSection(); // Call once on load
 });
 </script>
 </head>
