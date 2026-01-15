@@ -567,7 +567,7 @@ Start by row reducing the augmented matrix to a triangular form:
 
 
 
-<p>In past examples, we performed row operations and obtained “special" matrices
+<p>In past examples, we performed row operations and obtained “special” matrices
 \[
 \mat{rrrr}
 2 & -3 & 2 & 1 \\
@@ -816,7 +816,7 @@ $\mat{rrrrrr}
 Continue on your own, finding the $\RREF$.
 </div>
 
-<div style="margin-bottom: 10em;"></div>
+<div style="margin-bottom: 13em;"></div>
 
 
 <p class="no-indent"> Applying these row reduction steps to the augmented matrix of a linear system allows us to <i>explicitly describe</i> the solution set.</p>
@@ -922,11 +922,12 @@ Determine the existence and uniqueness of solutions to the systems with augmente
 \]
 </div>
 
+<div style="margin-bottom: 10em;"></div>
 
 
 
 
-<div class="theorem" data-title="Existence and Uniqueness Theorem" id="exist-unique-thm">
+<div class="theorem" data-title="(Existence and Uniqueness Theorem)" id="exist-unique-thm">
 A linear system is <i>consistent</i> (i.e., has solutions) if and only if the rightmost column of the augmented matrix is not a pivot column, i.e., if and only if any echelon form of its augmented matrix does not contain a row of the form
 \[
 \mat{ccc|c} 0 & \dots & 0 & c \rix, \qquad \text{where } c \neq 0
@@ -988,9 +989,338 @@ Answer the following. Be sure that you can fully explain your work!
 <div style="margin-bottom: 10em;"></div>
 
 
-<h2 id="sec3">Section 1.3: Vectors</h2>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="sec3">Section 1.3: Vector Equations</h2>
+
+
+
+
+
+
+
+Vectors are just an ordered list of numbers. Their relevance to linear systems is immediate.
+
+<div class="definition" data-title="(Vectors)">
+A matrix with one column is called a <i>column vector</i>, typically denoted by $\mathbf{x}$ or $\vec{x}$.
+</div>
+
+<p class="no-indent">For example, the following are two-dimensional vectors:
+\[
+\vec{u} = \mat{r} 3 \\ -1 \rix, \qquad \vec{v} = \mat{c} \pi \\ 0.1 \rix, \qquad \vec{w} = \mat{r} -0.5 \\ 45 \rix , \qquad \vec{x} = \mat{r} 2 \\ 2 \rix
+\] 
+</p>
+
+<p class="noindent">
+Each point $(x_1,x_2)$ in the plane corresponds to a vector $\mat{c} x_1 \\ x_2 \rix$ in $\R^2$:
+\[
+\R^2 \eq  \Bigg\{ \hspace{12em} \Bigg\} 
+.\] 
+</p>
+
+<!-- \begin{tikzpicture}[scale=0.65]
+\begin{axis}[grid=none,
+axis lines=middle,
+xmin=-4,xmax=4,
+ymin=-3,ymax=3,
+xtick=\empty,
+ytick=\empty,
+minor tick={},
+xlabel=\(x_1\), ylabel=\(x_2\),
+samples=250]
+\draw[->,thick] (0,0) -- (2,2) node[above right] {$(2,2)$};
+\addplot[soldot] coordinates {(2.1,2.1)};
+\draw[->,thick] (0,0) -- (3,-1) node[below left] {$(3,-1)$};
+\addplot[soldot] coordinates {(3.1,-1.1)};
+\draw[->,thick] (0,0) -- (-2,-1) node[below left] {$(-2,-1)$};
+\addplot[soldot] coordinates {(-2.1,-1.1)};
+\end{axis}
+\end{tikzpicture} -->
+
+
+<p class="no-indent">
+<b>Vector Addition:</b> We can <i>add</i> two vectors by adding corresponding components:
+\[
+\vec{u} = \mat{c} 1 \\ 3 \rix \qquad \vec{v} = \mat{c} 2 \\ 1 \rix \qquad \text{yields}
+\qquad \vec{u} + \vec{v} = \sol[][5em]{\mat{c} 1 + 2 \\ 3 + 1 \rix = \mat{c} 3 \\ 4 \rix.}
+\] 
+Geometrically, this is the so-called <i>parallelogram rule</i>.
+</p>
+
+<div class="proposition" data-title="Parallelogram Rule">
+If $\vec{u}$ and $\vec{v}$ are vectors in $\R^2$, then $\vec{u} + \vec{v}$ is the fourth vertex of a parallelogram with vertices $\vec{u}, \vec{v}, \vec{0}$.
+</div>
+
+<p class="no-indent">
+Note that $\vec{0} = \mat{c} 0 \\ 0 \rix$ in $\R^2$
+</p>
+
+
+<!-- \begin{minipage}{0.4\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[grid=none,
+axis lines=middle,
+xmin=0,xmax=4,
+ymin=0,ymax=4,
+xtick=\empty,
+ytick=\empty,
+minor tick={},
+xlabel=\(x_1\), ylabel=\(x_2\),
+samples=250]
+\fill[blue!5] (0,0) -- (1,3) -- (3,4) -- (2,1) --cycle;
+\draw[->,thick] (0,0) -- (1,3) node[midway,above left] {\large$\vec{u}$};
+\draw[->,thick] (0,0) -- (2,1) node[midway, below] {\large$\vec{v}$};
+\draw[->,very thick] (0,0) -- (3,4) node[midway,above,sloped] {\large$\vec{u} + \vec{v}$};
+\end{axis}
+\end{tikzpicture} -->
+
+<p class="no-indent">
+<b>Vector Scaling:</b> We can <i>multiply</i> a vector $\vec{x}$ by a <i>scalar</i> $c \in \R $. 
+\[
+\vec{x} = \mat{r} 1 \\ -2 \rix \qquad  3 \vec{x} = \mat{c} 3\cdot 1 \\ 3\cdot -2 \rix = \mat{r} 3 \\ -6 \rix, \qquad -2 \vec{x} = \mat{r} -2 \\ 4 \rix, \qquad \frac{1}{2}\vec{x} = \mat{c} 1 /2 \\ -1 \rix
+.\] 
+</p>
+<!-- 
+\begin{tikzpicture}[scale=0.9]
+\begin{axis}[grid=none,
+axis lines=middle,
+xmin=-3,xmax=4,
+ymin=-7,ymax=5,
+xtick=\empty,
+ytick=\empty,
+minor tick={},
+xlabel=\(x_1\), ylabel=\(x_2\),
+samples=250]
+\ifprintsol
+\draw[->,thick] (0,0) -- (3,-6) node[pos=1,right] {$3\vec{x}$};
+\draw[->,thick] (0,0) -- (-2,4) node[pos=1,right] {$-2\vec{x}$};
+\draw[->,thick] (0,0) -- (0.5,-1) node[pos=1,xshift=-2em] {$\frac{1}{2}\vec{x}$};
+\else \fi
+\draw[->,very thick,red] (0,0) -- (1,-2) node[pos=1,right] {$\vec{x}$};
+\end{axis}
+\end{tikzpicture} -->
+
+<p class="no-indent">
+<b>Vectors in $\R^n $:</b> Everything we have done above extends naturally to higher dimensional spaces. Namely, for an arbitrary integer $n$.
+</p>
+
+
+<div class="definition" data-title="($\R^n$)">
+For $n\ge 1$, the collection of all ordered $n$-tuples of real numbers is given by
+\[
+\R^n  \eq \cbr*{\mat{c} u_1 \\ \vdots \\ u_n \rix \:\mid\: u_1, \dots , u_n \in \R } 
+\] which is read ``r-n'', not ``r to the n''.
+</div>
+
+
+<div class="theorem">[Properties of $\R^n$]
+For all $\vec{u}, \vec{v}, \vec{w}$ in $\R^n $ and all scalars $c,d \in \R $:
+<ol style="column-count: 2; column-gap: 2em;">
+<li>$\vec{u} + \vec{v} = \vec{v} + \vec{u}$</li>
+<li>$(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$</li>
+<li>$\vec{u} + \vec{0} = \vec{u}$</li>
+<li>$\vec{u} + (-1)\vec{u} = \vec{u} - \vec{u} = \vec{0}$</li>
+<li>$c (\vec{u} + \vec{v}) = c \vec{u} + c \vec{v}$</li>
+<li>$(c+d) \vec{u} = c \vec{u} + d \vec{u}$</li>
+<li>$c (d \vec{u}) = (cd) \vec{u}$</li>
+<li>$1 \vec{u} = \vec{u}$</li>
+</ol>
+</div>
+
+
+
+<p class="no-indent">
+Adding and scaling vectors gives another vector (still in $\R^n $, say) which we call a <i>linear combination</i>.
+</p>
+
+<div class="definition" data-title="(Linear Combination)">
+Given vectors $\vec{v}_1, \vec{v}_2, \dots , \vec{v}_p$ in $\R^n $, and scalars $c_1, c_2, \dots , c_p$ in $\R $ (sometimes called the <i>weights</i>), then the vector
+\[
+\vec{y} \eq c_1 \vec{v}_1 + \dots + c_p \vec{v}_p
+\] is a <i>linear combination</i> of $\vec{v}_1, \dots , \vec{v}_p$. 
+</div>
+
+
+<div class="example">
+Given vectors $\vec{v}_1$ and $\vec{v}_2$ in $\R^n $, which of the following are linear combinations of $\vec{v}_1$ and $\vec{v}_2$?
+<ol>
+    <li>$2 \vec{v}_1 + \frac{1}{2} \vec{v}_2$</li>
+    <li>$-\vec{v}_1 + \sqrt{2} \, \vec{v}_2$</li>
+    <li>$4 \vec{v}_2$</li>
+    <li>$\vec{0}$</li>
+    <li>$\vec{v}_1 - \vec{v}_2$</li>
+</ol>
+</div>
+
+
+<div class="example">
+Let $\vec{v}_1 = \mat{c} 2 \\ 1 \rix$ and $\vec{v}_2 = \mat{r} -2 \\ 2 \rix$.
+Graph each of the following, then express them as a linear combination of $\vec{v}_1$ and $\vec{v}_2$.
+\[
+\vec{a} = \mat{c} 0 \\ 3\rix, 
+\quad
+\vec{b} = \mat{r} -4 \\ 1 \rix,
+\quad
+\vec{c} = \mat{c} 6 \\ 6 \rix,
+\quad
+\vec{d} = \mat{r} 7 \\ -4 \rix
+.\] 
+
+
+<!-- \begin{tikzpicture}[scale=1.1]
+\begin{axis}[grid=none,
+axis lines=middle,
+xmin=-8,xmax=8,
+ymin=-8,ymax=8,
+xtick={-8,-6,...,8},
+ytick={-8,-6,...,8},
+minor tick={},
+xlabel=\(x_1\), ylabel=\(x_2\),
+x post scale = 1.6,
+y post scale = 1.6,
+samples=250]
+\addplot[domain=-8:8] {0.5*x-12};
+\addplot[domain=-8:8] {0.5*x-9};
+\addplot[domain=-8:8] {0.5*x-6};
+\addplot[domain=-8:8] {0.5*x-3};
+\addplot[domain=-8:8] {0.5*x};
+\addplot[domain=-8:8] {0.5*x+3};
+\addplot[domain=-8:8] {0.5*x+6};
+\addplot[domain=-8:8] {0.5*x+9};
+\addplot[domain=-8:8] {0.5*x+12};
+
+\addplot[domain=-8:8] {-x-12};
+\addplot[domain=-8:8] {-x-9};
+\addplot[domain=-8:8] {-x-6};
+\addplot[domain=-8:8] {-x-3};
+\addplot[domain=-8:8] {-x};
+\addplot[domain=-8:8] {-x+3};
+\addplot[domain=-8:8] {-x+6};
+\addplot[domain=-8:8] {-x+9};
+\addplot[domain=-8:8] {-x+12};
+
+
+\draw[->,very thick] (0,0) -- (2,1) node[above right] {$\vec{v}_1$};
+\draw[->,very thick] (0,0) -- (-2,2) node[above] {$\vec{v}_2$};
+
+\ifprintsol
+\draw[->,very thick,red] (0,0) -- (0,3) node[right] {$\vec{a}$};
+\draw[->,very thick,blue] (0,0) -- (-4,1) node[above] {$\vec{b}$};
+\draw[->,very thick,green] (0,0) -- (6,6) node[above] {$\vec{c}$};
+\draw[->,very thick,magenta] (0,0) -- (7,-4) node[above] {$\vec{d}$};
+\else \fi
+\end{axis}
+\end{tikzpicture} -->
+
+</div>
+
+
+<p class="no-indent">
+In general, the last example is <b>hard!</b> to solve. Actually, it's one of the <i>major goals</i> of linear algebra!
+</br>
+For example, take the vectors
+\[
+\vec{a}_1 = \mat{>{\color{red}}c} 1 \\ 0 \\ 3 \rix
+\quad 
+\vec{a}_2 = \mat{>{\color{magenta}}c} 4 \\ 2 \\ 14 \rix
+\quad
+\vec{a}_3 = \mat{>{\color{green}}c} 3 \\ 6 \\ 10 \rix
+\quad
+\vec{b} = \mat{>{\color{orange}}r} -1 \\ 8 \\ -5 \rix
+.\]
+Is $\vec{b}$ a linear combination of $\vec{a}_1, \vec{a}_2, \vec{a}_3$? That is, do there exist weights $c_1, c_2, c_3 \in \R $ such that
+\[
+\vspace{3em}
+\] This <i>vector equation</i> can be written as
+\[
+\vspace{8em}
+\] which can, in turn, be written as the following <i>augmented matrix</i> and then row reduced:
+\[
+\hspace{10em}
+\quad
+\xrightarrow{\text{\normalsize Row Ops.}}
+\quad
+\]
+Therefore, the weights in the linear combination are found to be
+\[
+c_1 =  \qquad\quad c_2 =  \qquad \quad c_3 =
+\] 
+</p>
+
+
+
+
+<div class="theorem" id="span-linear-system">
+The vector $\vec{b}$ is a linear combination of $\vec{a}_1, \dots , \vec{a}_n$ if and only if there exists weights $c_1, \dots , c_n$ such that
+\[
+c_1 \vec{a}_1 + c_2 \vec{a}_2 + \dots + c_n \vec{a}_n \eq \vec{b}
+\]
+which in turn holds if and only if the linear system
+\[
+\mat{cccc|c}
+\vec{a}_1 & \vec{a}_2 & \dots & \vec{a}_n & \vec{b}
+\rix
+\] has a solution.  
+</div>
+
+
+<div class="definition" data-title="Span">
+The set of all linear combinations of $\vec{v}_1, \dots , \vec{v}_p \in \R^n $ is called the <i>span</i> of the vectors $\vec{v}_1, \dots , \vec{v}_p$, denoted by
+\[
+\Span \cbr*{\vec{v}_1, \dots , \vec{v}_p} \eq \cbr*{c_1 \vec{v}_1 + \dots + c_p \vec{v}_p \:\mid\: c_i \in \R} 
+.\]
+</div>
+
+
+<div class="example">
+Let $\vec{u}$ and $\vec{v}$ be nonzero vectors in $\R^3$.
+
+<ul>
+<li>Describe $\Span \cbr*{\vec{u}}$.</li>
+
+<li>Describe $\Span \cbr*{\vec{u}, \vec{v}}$ when $\vec{u}$ is <i>not</i> a scalar multiple of $\vec{v}$.</li>
+
+<li>Describe $\Span \cbr*{\vec{u}, \vec{v}}$ when $\vec{u}$ is a scalar multiple of $\vec{v}$.</li>
+
+<li>When is $\vec{0}$ in $\Span \cbr*{\vec{u}}$? In $\Span \cbr*{\vec{v}}$? In $\Span \cbr*{\vec{u}, \vec{v}}$?</li>
+
+</ul>
+</div>
+
+
+
+<div class="example">
+Let $A = \mat{cc} 1 & 2 \\ 3 & 1 \\ 0 & 5 \rix$ and $\vec{b} = \mat{c} 8 \\ 3 \\ 17 \rix$. Is $\vec{b}$ in the span of the columns of $A$?
+</br>
+By <a href="#span-linear-system" class="ref"></a>, we can check if the following augmented matrix has a solution:
+\[
+\mat{cc|c} 1 & 2 & 8 \\ 3 & 1 & 3 \\ 0 & 5 & 17 \rix
+.\] A $\REF$ of this augmented matrix is
+\[
+\mat{cc|r}
+1 & 2 & 8 \\ 
+0 & -5 & -21 \\
+0 & 0 & -4
+\rix
+.\]
+Therefore \dots
+</div>
 
 
 
