@@ -81,18 +81,25 @@
     \newcommand{\CC}{\mathbf{C}}
     \newcommand{\eq}[1][=]{\quad #1 \quad}
     \newcommand{\soln}{\textcolor{red}{\bf Solution:}\hspace{0.5em}}
-    \thinmuskip=4mu
-    \medmuskip=6mu plus 4mu minus 4mu
-    \thickmuskip=7mu plus 7mu
-    \scriptspace=1pt
+    \let\implies\Rightarrow
+    \let\impliedby\Leftarrow
+    \let\iff\Leftrightarrow
+    \renewcommand{\epsilon}{\varepsilon}
+    \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+    \DeclarePairedDelimiter{\norm}{\Vert}{\Vert}
+    \DeclarePairedDelimiter{\vect}{\langle}{\rangle}
+    \DeclarePairedDelimiter\cbr{\{}{\}}
+    \DeclarePairedDelimiter{\pbr}{(}{)}
+    \DeclarePairedDelimiter\sbr{[}{]}
+    \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 </script>
 <script>
   MathJax = {
     loader: {
-      load: ['[tex]/newcommand', '[tex]/mathtools', '[tex]/color']
+      load: ['[tex]/newcommand', '[tex]/mathtools', '[tex]/color', '[tex]/textmacros']
     },
     tex: {
-      packages: {'[+]': ['newcommand'],'[+]': ['mathtools'], '[+]': ['color']},
+      packages: {'[+]': ['newcommand'],'[+]': ['mathtools'], '[+]': ['color'], '[+]': ['textmacros']},
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
       processEscapes: true,
