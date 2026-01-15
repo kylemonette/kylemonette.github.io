@@ -22,28 +22,52 @@ author_profile: false
         counter-increment: theorem-counter;
     }
     .theorem::before {
-        content: "Theorem " counter(theorem-counter) attr(data-title) ". ";
+        content: "Theorem " counter(theorem-counter);
         font-weight: bold;
+    }
+    .theorem[data-title]::after {
+        content: " " attr(data-title);
+        font-weight: normal;
     }
     .definition::before {
-        content: "Definition " counter(theorem-counter) ". ";
+        content: "Definition " counter(theorem-counter);
         font-weight: bold;
+    }
+    .definition[data-title]::after {
+        content: " " attr(data-title);
+        font-weight: normal;
     }
     .lemma::before {
-        content: "Lemma " counter(theorem-counter) ". ";
+        content: "Lemma " counter(theorem-counter);
         font-weight: bold;
+    }
+    .lemma[data-title]::after {
+        content: " " attr(data-title);
+        font-weight: normal;
     }
     .example::before {
-        content: "Example " counter(theorem-counter) ". ";
+        content: "Example " counter(theorem-counter);
         font-weight: bold;
+    }
+    .example[data-title]::after {
+        content: " " attr(data-title);
+        font-weight: normal;
     }
     .proposition::before {
-        content: "Proposition " counter(theorem-counter) ". ";
+        content: "Proposition " counter(theorem-counter);
         font-weight: bold;
     }
+    .proposition[data-title]::after {
+        content: " " attr(data-title);
+        font-weight: normal;
+    }
     .result::before {
-        content: "Result " counter(theorem-counter) ". ";
+        content: "Result " counter(theorem-counter);
         font-weight: bold;
+    }
+    .result[data-title]::after {
+        content: " " attr(data-title);
+        font-weight: normal;
     }
 </style>
 </head>
@@ -83,11 +107,15 @@ author_profile: false
 Testing
 </div>
 
-<div class="theorem" data-title="numbers">
+<div class="theorem" data-title="(numbers)">
 Testing
 </div>
 
 <div class="definition">
+A definition here
+</div>
+
+<div class="definition" data-title="(test)">
 A definition here
 </div>
 
