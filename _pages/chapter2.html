@@ -208,32 +208,47 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2 id="sec1">Section 1.1: Test</h2>
 
 
-<p>Our goal: Solve a collection of equations, such as
-\begin{align*}
-x_1 - 2x_2 & \eq -1 & (L_1) & \\
--x_1 + 3x_2 & \eq 3 & (L_2) &
-\end{align*}
-The solution is a pair of numbers $(x_1,x_2)$ satisfying both equations.</p>
+<p>Our goal: Solve a collection of equations, such as:</p>
+<table class="plain">
+<tr>
+    <td style = "border: none;">
+        <p>
+        \begin{align*}
+        x_1 - 2x_2 & \eq -1 & (L_1) & \\
+        -x_1 + 3x_2 & \eq 3 & (L_2) &
+        \end{align*}
+        </p>
+    </td>
+    <td style = "border: none;">
+        <div class="tikz-center">
+        <img src="/images/215-graphs/1.1.1.svg" alt="Two lines that intersect at the ordered pair (3,2)">
+        </div>
+    </td>
+    <td style = "border: none;">
+        <p>
+        \[
+        \begin{array}{crcc}
+        & x_1 - 2x_2 & = & -1 \\ 
+        + & \\ 
+        & -x_1 + 3x_2 & = & 3 \\[1em]\hline
+        & \\
+        <!-- & \sol[1em]{x_2} & \sol{=} & \sol{2} -->
+        \end{array}
+        \] <!-- \sol{Therefore, $x_1 = 3$.} -->
+        </p> 
+    </td>
+</tr>
+</table>
 
-<div class="tikz-center">
-    <img src="/images/215-graphs/1.1.1.svg" alt="Two lines that intersect at the ordered pair (3,2)">
-</div>
+<p>
+The solution is a pair of numbers $(x_1,x_2)$ satisfying both equations.
+</p>
+
 
 <!-- \sol[1em]{The solution is $(x_1,x_2) = (3,2)$.}  -->
 
 
-<p>
-\[
-\begin{array}{crcc}
-& x_1 - 2x_2 & = & -1 \\ 
-+ & \\ 
-& -x_1 + 3x_2 & = & 3 \\[1em]\hline
-& \\
-<!-- & \sol[1em]{x_2} & \sol{=} & \sol{2} -->
-\end{array}
-\] 
-<!-- \sol{Therefore, $x_1 = 3$.} -->
-</p> 
+
 
 
 <div class="definition">
