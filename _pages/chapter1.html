@@ -777,7 +777,7 @@ A=\mat{rrrrr}
 
 
 <div class="example">
-Reduce the matrix to its \RREF:
+Reduce the matrix to its $\RREF$:
 $\mat{rrrrrr}
 0 & 3 & -6 & 6 & 4 & -5 \\
 3 & -7 & 8 & -5 & 8 & 9 \\
@@ -787,36 +787,36 @@ $\mat{rrrrrr}
 & \text{Step 2: Pivot at } (1,1)
 & \quad R_1 \leftrightarrow R_3 & \qquad 
 \mat{rrrrrr}
-\circled{3} & -9 & 12 & -9 & 6 & 15 \\
+3 & -9 & 12 & -9 & 6 & 15 \\
 3 & -7 & 8 & -5 & 8 & 9 \\
 0 & 3 & -6 & 6 & 4 & -5
 \rix \\
 & \text{Step 3: Row ops.} 
 & \quad R_2 \leftarrow R_2 - R_1 & \qquad 
 \mat{rrrrrr}
-\circled{3} & -9 & 12 & -9 & 6 & 15 \\
+3 & -9 & 12 & -9 & 6 & 15 \\
 0 & 2 & -4 & 4 & 2 & -6 \\
 0 & 3 & -6 & 6 & 4 & -5
 \rix \\ 
 & \text{Step 4: Ignore Row 1, pivot at } (2,2)
 & \quad & \qquad 
 \mat{rrrrrr}
-\rowcolor{green!15} 3 & -9 & 12 & -9 & 6 & 15 \\
-0 & \circled{2} & -4 & 4 & 2 & -6 \\
+3 & -9 & 12 & -9 & 6 & 15 \\
+0 & 2 & -4 & 4 & 2 & -6 \\
 0 & 3 & -6 & 6 & 4 & -5
 \rix \\
 & \text{Step 3: Row ops. }
 & \quad R_3 \leftarrow R_3 - \frac{3}{2} R_2 & \qquad 
 \mat{rrrrrr}
-\rowcolor{green!15}3 & -9 & 12 & -9 & 6 & 15 \\
-\rowcolor{green!15}0 & \circled{2} & -4 & 4 & 2 & -6 \\
+3 & -9 & 12 & -9 & 6 & 15 \\
+0 & 2 & -4 & 4 & 2 & -6 \\
 0 & 0 & 0 & 0 & 1 & 4
 \rix
 \end{align*}
 Continue on your own, finding the $\RREF$.
 </div>
 
-
+<div style="margin-bottom: 10em;"></div>
 
 
 <p class="no-indent"> Applying these row reduction steps to the augmented matrix of a linear system allows us to <i>explicitly describe</i> the solution set.</p>
@@ -860,6 +860,7 @@ x_1 & &   &-& 5x_3 &=& 1 \\
 So, the system is:
 </div>
 
+<div style="margin-bottom: 8em;"></div>
 
 
 <div class="basicbox">
@@ -869,7 +870,7 @@ So, the system is:
 </div>
 
 <div class="example">
-Find the solution to the system whose augmented matrix has a \REF of:
+Find the solution to the system whose augmented matrix has a $\REF$ of:
 \[
 \mat{rrrrr|r}
 1 & 6 & 2 & -5 & -2 & -4 \\
@@ -877,14 +878,17 @@ Find the solution to the system whose augmented matrix has a \REF of:
 0 & 0 & 0 & 0 & 1 & 7
 \rix
 .\] 
-We begin by row reducing further to get the \RREF:
+We begin by row reducing further to get the $\RREF$:
 
+<div style="margin-bottom: 10em;"></div>
 
-
-Basic columns are:    Nonbasic columns are: 
-
+Basic columns are:
+</br>
+Nonbasic columns are: 
+</br>
 The \RREF gives the following system of equations:
 
+<div style="margin-bottom: 10em;"></div>
 
 
 The basic variables in terms of the free variables are:
@@ -899,25 +903,23 @@ x_5 &=
 
 
 
-<p class="no-indent">Even though the \REF is insufficient to <i>solve</i> a linear system, it does answer if the system is <i>consistent</li> or not (and, how many solutions there are, if any).</p>
+<p class="no-indent">Even though the \REF is insufficient to <i>solve</i> a linear system, it does answer if the system is <i>consistent</i> or not (and, how many solutions there are, if any).</p>
 
 <div class="example">
 Determine the existence and uniqueness of solutions to the systems with augmented matrices:
-$
+\[
 \mat{rrrrr|r}
 3 & -9 & 12 & -9 & 6 & 15 \\
 0 & 2 & -4 & 4 & 2 & -6 \\
 0 & 0 & 0 & 0 & 1 & 4 
 \rix
-$
-
-$
+\qquad\qquad
 \mat{cc|r}
 3 & 4 & -3 \\
 0 & 1 & 3 \\
 0 & 0 & 0
 \rix
-$
+\]
 </div>
 
 
@@ -937,7 +939,7 @@ If a linear system is consistent, then the solution set contains either:
 </div>
 
 
-<p class="no-indent"> Suppose a linear system is consistent. To determine if there is a unique solution, what must be true about the pivot locations? Does every row need a pivot? Does every column need a pivot?
+<p class="no-indent">Suppose a linear system is consistent. To determine if there is a unique solution, what must be true about the pivot locations? Does every row need a pivot? Does every column need a pivot?
 </br>
 Think about it!
 </p>
@@ -949,14 +951,14 @@ Think about it!
 <b>Solving a Linear System via Row Reduction:</b>
 <ol>
 <li>Write the augmented matrix of the system.</li>
-<li>Obtain the \REF of the augmented matrix.
+<li>Obtain the $\REF$ of the augmented matrix.
 <ul>
 <li>If a row of $\mat{ccc|c} 0 & \dots & 0 & c \rix$ where $c\neq 0$ is encountered, stop. There are no solutions.</li>
 <li>Otherwise, continue.</li>
 </ul>
 </li>
-<li>Continuing row reducing to obtain the \RREF.</li>
-<li>Write the system of equations obtained from the \RREF.</li>
+<li>Continuing row reducing to obtain the $\RREF$.</li>
+<li>Write the system of equations obtained from the $\RREF$.</li>
 <li>Rewrite each equation so that its basic variable is in terms of any free variables.</li>
 </ol>
 </div>
@@ -966,15 +968,25 @@ Think about it!
 Answer the following. Be sure that you can fully explain your work!
 <ol>
 <li>What is the largest possible number of pivots a $4\times 6$ matrix can have?</li>
+<div style="margin-bottom: 10em;"></div>
 
 <li>What is the largest possible number of pivots a $6\times 4$ matrix can have?</li>
 
+<div style="margin-bottom: 10em;"></div>
+
 <li>A consistent linear system has $3$ equations and $4$ unknowns. How many solutions does it have?</li>
+
+<div style="margin-bottom: 10em;"></div>
 
 <li>Suppose the coefficient matrix corresponding to a linear system is $4\times 6$ with $3$ pivot columns. How many pivot columns does the augmented matrix have, if the linear system is inconsistent?</li>
 </ol>
 </div>
 
+
+<div style="margin-bottom: 10em;"></div>
+
+
+<h2 id="sec3">Section 1.3: Vectors</h2>
 
 
 
