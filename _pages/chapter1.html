@@ -12,40 +12,6 @@ author_profile: false
 <script src="https://tikzjax.com/v1/tikzjax.js"></script>
 <style>
 
-    /* Media query for mobile devices */
-    @media screen and (max-width: 768px) {
-        nav.toc {
-            display: none;
-        }
-        body {
-            margin-left: 20px;
-            margin-right: 20px;
-            max-width: 100%;
-            padding: 0 10px;
-        }
-        header {
-            margin-left: 0;
-        }
-    }
-    /* Optional: For tablets and smaller laptops */
-    @media screen and (max-width: 1024px) and (min-width: 769px) {
-        nav.toc {
-            width: 200px;
-        }
-        body {
-            margin-left: 220px;
-            max-width: 65%;
-        }
-    }
-
-    body {
-        max-width: 70%;
-        background-color: #ffffff;
-        box-shadow: none;
-        border: none;
-        counter-reset: theorem-counter;
-        margin-left: 280px;
-    }
     p {
     overflow: visible;
     }
@@ -206,6 +172,15 @@ author_profile: false
         padding: 20px;
         box-sizing: border-box;
     }
+
+    body {
+        max-width: 70%;
+        background-color: #ffffff;
+        box-shadow: none;
+        border: none;
+        counter-reset: theorem-counter;
+        margin-left: 280px;
+    }
     
     nav.toc h2 {
         font-size: 1.2em;
@@ -247,6 +222,37 @@ author_profile: false
     header {
         margin-left: 0;
     }
+
+    /* Tablets and smaller laptops (769px to 1024px) */
+    @media screen and (max-width: 1024px) and (min-width: 769px) {
+        nav.toc {
+            width: 200px;
+        }
+        
+        body {
+            margin-left: 220px;
+            max-width: 65%;
+        }
+    }
+
+    /* Mobile devices (768px and below) */
+    @media screen and (max-width: 768px) {
+        nav.toc {
+            display: none;
+        }
+        
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+            max-width: 100%;
+            padding: 0 10px;
+        }
+        
+        header {
+            margin-left: 0;
+        }
+    }
+
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
