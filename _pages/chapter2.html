@@ -134,7 +134,37 @@ author_profile: false
         font-weight: bold;
         display: block;
     }
+    a.ref {
+        color: #0066cc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    a.ref:hover {
+        text-decoration: underline;
+    }
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const theoremElements = document.querySelectorAll('.theorem, .definition, .lemma, .example, .proposition, .result');
+    const theoremNumbers = new Map();
+    
+    theoremElements.forEach((el, index) => {
+        if (el.id) {
+            theoremNumbers.set(el.id, index + 1);
+        }
+    });
+    
+    document.querySelectorAll('a.ref').forEach(ref => {
+        const targetId = ref.getAttribute('href').substring(1);
+        if (theoremNumbers.has(targetId)) {
+            const number = theoremNumbers.get(targetId);
+            const type = document.getElementById(targetId).className.split(' ')[0];
+            const typeName = type.charAt(0).toUpperCase() + type.slice(1);
+            ref.textContent = `${typeName} ${number}`;
+        }
+    });
+});
+</script>
 </head>
 
 <body>
@@ -217,7 +247,7 @@ samples=250]
 </p> 
 
 
-<div class="definition">
+<div class="definition" id="def-tag1">
 A <i>linear equation</i> in the variables $x_1, \dots , x_n$ is an equation of the form
 \[
 a_1 x_1 + a_2 x_2 + \dots + a_n x_n \eq b, \qquad a_i \in \R ,\;  b\in \R , \; n\ge 1
@@ -226,6 +256,8 @@ A <i>system</i> of linear equations (linear system) is a collection of linear eq
 </br>
 The <i>solution set</i> of the linear system is all possible solutions.
 </div>
+
+<p>By <a href="#def-tag1" class="ref"></a>,then </p>
 
 
 <p class="no-indent">Nonlinear equations like $4x_1-6x_2=x_1x_2$ or $x_2 = 2 \sqrt{x_1} + 5$ are not our interest!</p>
