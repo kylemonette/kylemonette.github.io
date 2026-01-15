@@ -339,9 +339,9 @@ x_1 &-& 2x_2 &+& x_3 &=& 0 \\
 Working from the bottom upwards:
 \[
 \begin{array}{ccclcl}
-x_3 &= -1 & \qquad\qquad\qquad x_2 & = \sol{4 + 4x_3} & \qquad\qquad\qquad\qquad\qquad x_1 & = \sol{2x_2 - x_3} \\[1em]
-& & &= \sol{4-4} & & = \sol{2\cdot 0 + 1} \\[1em]
-& & &= \sol{0} & & = \sol{1} 
+x_3 &= -1 & \qquad\qquad\qquad x_2 & =  & \qquad\qquad\qquad\qquad\qquad x_1 & =  \\[1em]
+& & &= \quad & & = \\[1em]
+& & &= \quad & & = 
 \end{array} 
 \]</p>
 
@@ -422,8 +422,8 @@ $\mat{rrr|r}
 
 <p class="no-indent">Therefore, a system of $m$ equations with $n$ unknowns is associated to:</br>
 <ol>
-<li>a coefficient matrix of size: \sol{$m\times n$}</li>
-<li>an augmented matrix of size: \sol{$m\times (n+1)$}</li>
+<li>a coefficient matrix of size:</li>
+<li>an augmented matrix of size:</li>
 </ol>
 
 
@@ -509,27 +509,27 @@ Solve the system of linear equations by forming the augmented matrix and perform
 \sol[][24em]{
 \mat{rr|r} 4 & 6 & -12 \\
 0 & 4 & -16
-\rix} \\[\ifprintsol0em\else4em\fi] 
+\rix} \\[4em]
 & \qquad R_2 \leftarrow \sol{\frac{1}{4}\cdot R_2} & \qquad &
 \sol{
 \mat{rr|r}
 4 & 6 & -12 \\
 0 & 1 & -4
-\rix} \\[\ifprintsol0em\else4em\fi] 
+\rix} \\[4em]
 & \qquad R_1 \leftarrow \sol{R_1 - 6 R_2} & \qquad &
 \sol{
 \mat{rr|r}
 4 & 0 & 12 \\
 0 & 1 & -4
-\rix} \\[\ifprintsol0em\else4em\fi] 
+\rix} \\[4em]
 & \qquad R_1 \leftarrow \sol{\frac{1}{4} \cdot R_1} & \qquad &
 \sol{
 \mat{rr|r}
 1 & 0 & 3 \\
 0 & 1 & -4
-\rix }\\[\ifprintsol0em\else3em\fi] 
+\rix }\\[3em]
 \end{align*}
-The solution is then $(x_1, x_2) = \sol{(3,-4)}$
+The solution is then $(x_1, x_2) = ( \quad, \quad )$.
 </div>
 
 <div class="example">
@@ -551,23 +551,9 @@ Start by forming the augmented matrix, and performing row operations:
 4 & -8 & 12 & 1 
 \rix
 & \qquad R_1 \leftrightarrow R_2 & \qquad &
-\sol[][20em]{\mat{rrr|r}
-2 & -3 & 2 & 1 \\
-0 & 1 & -4 & 8 \\
-4 & -8 & 12 & 1 
-\rix} \\[\ifprintsol0em\else6em\fi] 
-& \qquad R_3 \leftarrow R_3 - 2\cdot R_1 & \qquad &
-\sol{\mat{rrr|r}
-2 & -3 & 2 & 1 \\
-0 & 1 & -4 & 8 \\
-0 & -2 & 8 & -1 
-\rix} \ifprintsol \\ \else \\[6em] \fi
-& \qquad R_3 \leftarrow R_3 + 2\cdot R_2 & \qquad &
-\sol{\mat{rrr|r}
-2 & -3 & 2 & 1 \\
-0 & 1 & -4 & 8 \\
-0 & 0 & 0 & 15 
-\rix} \ifprintsol \else \\[4em] \fi
+\hspace{20em} \\[6em] 
+& \qquad R_3 \leftarrow R_3 - 2\cdot R_1 & \qquad & \\[6em]
+& \qquad R_3 \leftarrow R_3 + 2\cdot R_2 & \qquad & \\[4em]
 \end{align*}
 
 Is the system <i>consistent</i>?
@@ -622,7 +608,7 @@ Solve the linear system whose augmented matrix is
 1 & -2 & 1 & 0 \\
 0 & 1 & -4 & 4 \\
 0 & 0 & 1 & -1
-\rix \\ %\quad \begin{aligned} \text{Look familiar?} \\[-0.5em] \text{\it Triangular Form} \end{aligned} \\
+\rix \\
 & \qquad R_2 \leftarrow R_2 + 4\cdot R_3 & \qquad &
 \mat{crr|r}
 1 & -2 & 1 & 0 \\
@@ -643,7 +629,7 @@ Solve the linear system whose augmented matrix is
 \rix 
 \end{align*}
 
-The solution is then $(x_1, x_2, x_3) = \sol{(1,0,-1)}$
+The solution is then $(x_1, x_2, x_3) = (\quad, \quad, \quad )$.
 </div>
 
 <div class="example">
