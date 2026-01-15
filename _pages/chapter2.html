@@ -31,12 +31,18 @@ author_profile: false
         max-width: 100%;  /* Ensures responsiveness on smaller screens */
     }
     table.plain {
-        border: none;
-        border-collapse: collapse;
+        border-collapse: separate;
+        border-spacing: 20px 0;
+        border-top: 0px;
+        border-bottom: 0px;
     }
     table.plain td {
         border: none;
+        border-right: 1px solid #ccc;
         padding: 10px;
+    }
+    table.plain td:last-child {
+        border-right: none;
     }
     .theorem, .definition, .lemma, .example, .proposition, .result {
         counter-increment: theorem-counter;
