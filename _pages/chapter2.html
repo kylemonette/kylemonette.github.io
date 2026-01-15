@@ -20,6 +20,10 @@ author_profile: false
     .author {
         font-size: 1.5em;
     }
+    .tikz-center {
+        text-align: center;
+        margin: 20px 0;
+    }
     .theorem, .definition, .lemma, .example, .proposition, .result {
         counter-increment: theorem-counter;
         font-style: normal;
@@ -154,16 +158,20 @@ author_profile: false
 <article class="indent-pars">
 
 
-<script type="text/tikz">
-  \begin{tikzpicture}
-    \draw (0,0) circle (1in);
-  \end{tikzpicture}
-</script>
+
 
 
 <h2 id="sec1">Section 1.1: Test</h2>
 
 <p>This gives us the theorem.</p>
+
+<div class="tikz-center">
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \draw (0,0) circle (1in);
+  \end{tikzpicture}
+</script>
+</div>
 
 <div class="theorem">
 Testing
