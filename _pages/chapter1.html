@@ -11,6 +11,33 @@ author_profile: false
 <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
 <script src="https://tikzjax.com/v1/tikzjax.js"></script>
 <style>
+
+    /* Media query for mobile devices */
+    @media screen and (max-width: 768px) {
+        nav.toc {
+            display: none;
+        }
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+            max-width: 100%;
+            padding: 0 10px;
+        }
+        header {
+            margin-left: 0;
+        }
+    }
+    /* Optional: For tablets and smaller laptops */
+    @media screen and (max-width: 1024px) and (min-width: 769px) {
+        nav.toc {
+            width: 200px;
+        }
+        body {
+            margin-left: 220px;
+            max-width: 65%;
+        }
+    }
+
     body {
         max-width: 70%;
         background-color: #ffffff;
@@ -1285,9 +1312,14 @@ For example, take the vectors
 Is $\vec{b}$ a linear combination of $\vec{a}_1, \vec{a}_2, \vec{a}_3$? That is, do there exist weights $c_1, c_2, c_3 \in \R $ such that
 </p>
 
+<div style="margin-bottom: 5em;"></div> 
+
+
 <p class="no-indent">
 This <i>vector equation</i> can be written as
 </p>
+
+<div style="margin-bottom: 5em;"></div> 
 
 <p class="no-indent">
 which can, in turn, be written as the following <i>augmented matrix</i> and then row reduced:
@@ -1297,6 +1329,11 @@ which can, in turn, be written as the following <i>augmented matrix</i> and then
 \xrightarrow{\text{\normalsize Row Ops.}}
 \quad
 \]
+</p>
+
+<div style="margin-bottom: 5em;"></div> 
+
+<p class="no-indent">
 Therefore, the weights in the linear combination are found to be
 \[
 c_1 =  \qquad\quad c_2 =  \qquad \quad c_3 =
