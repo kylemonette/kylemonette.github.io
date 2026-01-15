@@ -253,9 +253,6 @@ The solution is a pair of numbers $(x_1,x_2)$ satisfying both equations.
 </p>
 
 
-<!-- \sol[1em]{The solution is $(x_1,x_2) = (3,2)$.}  -->
-
-
 
 
 
@@ -346,9 +343,6 @@ x_3 &= -1 & \qquad\qquad\qquad x_2 & =  & \qquad\qquad\qquad\qquad\qquad x_1 & =
 \end{array} 
 \]</p>
 
-<!-- <p>The solution set is: \quad $(x_1,x_2,x_3) = \sol{(1,0,-1)}$</p> -->
-
-
 <div class="definition" data-title="(Equivalent Linear Systems)">
 Two linear systems are called <i>equivalent</i> if their solution sets are equal.
 </div>
@@ -367,23 +361,6 @@ x_1 &-& 2x_2 &+& x_3 &=& 0 \\
 5x_1 &&  &-& 5x_3 &=& 10 
 \end{array}
 \]</p>
-
-<!-- \begin{instructor}
-\vspace{2em}
-\[
-\mat{crr}
-1 & -2 & 1 \\
-0 & 2 & -8 \\
-5 & 0 & -5
-\rix
-\qquad \qquad
-\mat{crr|c}
-1 & -2 & 1 & 0 \\
-0 & 2 & -8 & 8 \\
-5 & 0 & -5 & 10
-\rix
-.\] 
-\end{instructor}  -->
 
 
 <p class="no-indent">The <b>size</b> of a matrix is: (number of rows) $\times $ (number of columns). For example:</p>
@@ -448,49 +425,6 @@ To solve a linear system, create the augmented matrix. Our goal is to convert th
 Any combination of elementary row operations applied to any augmented matrix creates a new augmented matrix that is <b>row equivalent</b> to the original, thus preserving the solution set.
 </div>
 
-<!-- \begin{instructor}
-What row operations are used? Ones that convert the system to a \textit{triangular form} like the one above.
-\end{instructor}  -->
-
-
-
-<!-- \noindent
-\begin{minipage}[t]{0.7\textwidth}
-\noindent
-\scalebox{0.8}{
-\basicbox
-{\bf Elementary Row Operations:}
-
-\begin{enumerate}
-\item (Replacement) Replace one row by the sum of that row and a multiple of another.
-
-{\it That is, add to one row a multiple of another row.}
-
-\item (Interchange) Interchange two rows.
-\item (Scaling) Multiply a row by a nonzero constant.
-\end{enumerate}
-\overbox}
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.4\textwidth}
-\noindent
-\scalebox{0.8}{
-\noindent
-\basicbox
-\textbf{Goal:}
-
-\noindent Obtain a triangular form like:
-\medskip
-
-$\mat{ccccc|c}
-1 & \ast & \ast & \ast & \dots & \ast \\
-0 & 1 & \ast & \ast & \dots & \ast \\
-0 & 0 & 1 & \ast & \dots & \ast \\
-\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
-\rix$
-\overbox}
-\end{minipage}  -->
-
 
 <div class="example">
 Solve the system of linear equations by forming the augmented matrix and performing row operations.
@@ -540,18 +474,6 @@ Start by forming the augmented matrix, and performing row operations:
 \end{align*}
 
 Is the system <i>consistent</i>?
-
-<!-- \begin{instructor}
-Converting back to the equation form,
-\[
-\begin{array}{ccccccl}
-2x_1 &-&  3x_2 &+& 2x_3 &=& 1 \\
-&& x_2 &-& 4x_3 &=& 8 \\
-&&  && 0 &=& 15 \quad \leftarrow \text{False!} 
-\end{array} 
-\] 
-No Solution! System is \textbf{inconsistent}.
-\end{instructor} -->
 </div>
 
 <div class="example">
@@ -625,30 +547,15 @@ For what values of $h$ is the system consistent? For those values of $h$, how ma
 .\] 
 
 Start by row reducing the augmented matrix to a triangular form:
-<!-- 
-\[
-\mat{rr|r}
-3 & -9 & 4 \\
--2 & 6 & h 
-\rix
-\quad R_1\leftarrow R_1\cdot \frac{1}{3} \quad
-\mat{rr|r}
-1 & -3 & 4 /3 \\
--2 & 6 & h 
-\rix
-\quad R_2\leftarrow R_2 + 2\cdot R_1 \quad
-\mat{rr|r}
-1 & -3 & 4 /3 \\
-0 & 0 & h + 8 /3
-\rix
-.\] 
-Second equation is $0 \cdot x_1 + 0\cdot x_2 = h + \frac{8}{3}$. Consistent when $h + \frac{8}{3}=0$, so $h = -\frac{8}{3}$.
-How many solutions are there, if $h = -\frac{8}{3}$?
-Any value of $x_1$ and $x_2$ satisfy the second equation $0\cdot x_1 + 0\cdot x_2 = 0$. Therefore, $x_2$ can be any real number and then $x_1 - 3x_2 = \frac{4}{3}$ so $x_1 = 3x_2 + \frac{4}{3}$.
-So when $h= -\frac{8}{3}$ there are infinitely many solutions! -->
 </div>
 
 <div style="margin-bottom: 15em;"></div>
+
+
+
+
+
+
 
 
 <h2 id="sec2">Section 1.2: Row Reduction and Echelon Forms</h2>
@@ -660,62 +567,421 @@ So when $h= -\frac{8}{3}$ there are infinitely many solutions! -->
 
 
 
+<p>In past examples, we performed row operations and obtained “special" matrices
+\[
+\mat{rrrr}
+2 & -3 & 2 & 1 \\
+0 & 1 & -4 & 8 \\
+0 & 0 & 0 & 15
+\rix \quad \text{and} \quad
+\mat{crr}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 
+\rix
+.\]
+(They were augmented matrices, but the following applies to any matrix.)
+</br>
+In this section, we describe a procedure for “reducing'' matrices to this desired form.</p>
 
-<!-- works, but is too memory intensive on the webpage -->
-<!-- <div class="tikz-center">
-<script type="text/tikz">
-  \begin{tikzpicture}
-    \draw (0,0) circle (1in);
-  \end{tikzpicture}
-</script>
-</div> -->
 
-<!-- <div style="margin-bottom: 10em;"></div> -->
-
-<!-- <div class="theorem" id="thm-tag1">
-Testing
+<div class="definition" data-title="(Row Echelon Form)">
+Any matrix is in <i>row echelon form</i> ($\REF$) if:
+<ol>
+<li>All nonzero rows are above any rows of all zeros.</li>
+<li>Each leading entry of a row (the leftmost nonzero entry) is in a column to the right of the leading entry of the row above it.</li>
+<li>All entries in a column below a leading entry are zero.</li>
+</ol>
 </div>
 
-<p>By <a href="#thm-tag1" class="ref"></a>,then </p>
+<p class="no-indent">For example: these are in $\REF$. Leading entries are the $\blacksquare$, and $\ast$ denotes anything.
+\[
+\mat{cccc}
+\blacksquare & \ast  & \ast  & \ast \\
+0 & \blacksquare & \ast  & \ast  \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\rix
+\qquad
+\mat{ccc}
+\blacksquare & \ast & \ast  \\
+0 & \blacksquare & \ast  \\
+0 & 0 & \blacksquare \\
+0 & 0 & 0 
+\rix
+\qquad
+\mat{ccccccccccc}
+0 & \blacksquare & \ast & \ast & \ast & \ast & \ast & \ast & \ast & \ast & \ast \\
+0 & 0 & 0 & \blacksquare & \ast & \ast & \ast & \ast & \ast & \ast & \ast \\
+0 & 0 & 0 & 0 & \blacksquare & \ast & \ast & \ast & \ast & \ast & \ast \\
+0 & 0 & 0 & 0 & 0 & 0 & \blacksquare & \ast & \ast & \ast & \ast \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \blacksquare & \ast & \ast & \ast 
+\rix
+.\] 
+</p>
 
-<p>This is what the theorem says</p>
 
-
-<div class="theorem" data-title="(numbers)" id="thm-tag2">
-Testing
+<div class="definition" data-title="(Reduced Row Echelon Form)">
+A matrix is in <i>reduced row echelon form</i> ($\RREF$) if
+<ol>
+<li>It is in $\REF$.</li>
+<li>The leading entry in each nonzero row is $1$.</li>
+<li>Each leading $1$ is the only nonzero entry in its column.</li>
+</ol>
 </div>
 
-<p>By <a href="#thm-tag2" class="ref"></a>,then </p>
+<p class="no-indent">For example: the above matrices in $\RREF$ are:</p>
+<table class="plain">
+<tr>
+    <td style="border: none;">
+        $\mat{cccc}
+        \blacksquare & \ast  & \ast  & \ast \\
+        0 & \blacksquare & \ast  & \ast  \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0
+        \rix$
+    </td>
+    <td style = "border: none;">
+        $\mat{ccc}
+        \blacksquare & \ast & \ast  \\
+        0 & \blacksquare & \ast  \\
+        0 & 0 & \blacksquare \\
+        0 & 0 & 0 
+        \rix$
+    </td>
+    <td style="border: none;">
+        $\mat{ccccccccccc}
+        0 & \blacksquare & \ast & \ast & \ast & \ast & \ast & \ast & \ast & \ast & \ast \\
+        0 & 0 & 0 & \blacksquare & \ast & \ast & \ast & \ast & \ast & \ast & \ast \\
+        0 & 0 & 0 & 0 & \blacksquare & \ast & \ast & \ast & \ast & \ast & \ast \\
+        0 & 0 & 0 & 0 & 0 & 0 & \blacksquare & \ast & \ast & \ast & \ast \\
+        0 & 0 & 0 & 0 & 0 & 0 & 0 & \blacksquare & \ast & \ast & \ast 
+        \rix$
+    </td>
+</tr>
+<td style="border: none;">
+$\mat{cccc}
+1 & 0 & \ast & \ast \\
+0 & 1 & \ast & \ast  \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
+\rix$
+</td>
+<td style="border: none;">
+$\mat{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0 
+\rix$
+</td>
+<td style="border: none;">
+$\mat{ccccccccccc}
+0 & 1 & \ast & 0 & 0 & \ast & 0 & 0 & \ast & \ast & \ast \\
+0 & 0 & 0 & 1 & 0 & \ast & 0 & 0 & \ast & \ast & \ast \\
+0 & 0 & 0 & 0 & 1 & \ast & 0 & 0 & \ast & \ast & \ast \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & \ast & \ast & \ast \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & \ast & \ast & \ast 
+\rix$
+</td>
+</tr>
+</table>
+
+
+
+<div class="theorem">
+Every matrix is row equivalent to only one reduced row echelon matrix.
+</div>
+
+
+<div class="definition" data-text="(Pivots and Pivot Columns)">
+<ul>
+<li>A <i>pivot position</i> is a location of a leading entry in a $\REF$ of a matrix.</li>
+<li>A <i>pivot</i> is nonzero number in a pivot position used to create zeros via row operations.</li>
+<li>A <i>pivot column</i> is a column that contains a pivot position.</li>
+</ul>
+</div>
+
 
 <div class="basicbox">
-Any content ehre
+<b>Row Reduction Steps:</b> ($\REF$ and $\RREF$)
+<ol>
+<li>Start with leftmost nonzero column. The pivot position is the top.</li>
+<li>If needed, do a row swap to put a (nonzero) pivot in the pivot position.</li>
+<li>Do row operations to zero out all positions below the pivot.</li>
+<li>Ignore this row (and everything above). Apply steps 1--3 to the submatrix that remains. Repeat until there are no more rows to modify.</li>
+</ol>
+For $\RREF$:
+<ol start="5">
+<li>Start with rightmost pivot. Work upward and to the left to create zeros above each pivot. Make each pivot $1$ by scaling.</li>
+</ol>
 </div>
 
-<div class="definition" id="deg-tag1">
-A definition here
+
+
+
+<div class="example">
+Convert $A$ to a row echelon form:
+\begin{align*}
+A=\mat{rrrrr}
+0 & -3 & -6 & 4 & 9 \\
+-1 & -2 & -1 & 3 & 1 \\
+-2 & -3 & 0 & 3 & -1 \\
+1 & 4 & 5 & -9 & -7 
+\rix
+& \qquad  \hspace{10em}  & \quad &
+\mat{rrrrr}
+1 & 4 & 5 & -9 & -7 \\
+-1 & -2 & -1 & 3 & 1 \\
+-2 & -3 & 0 & 3 & -1 \\
+0 & -3 & -6 & 4 & 9
+\rix \\
+& \qquad   & \quad &
+\mat{rrrrr}
+1 & 4 & 5 & -9 & -7 \\
+0 & 2 & 4 & -6 & -6 \\
+-2 & -3 & 0 & 3 & -1 \\
+0 & -3 & -6 & 4 & 9 
+\rix \\
+& \qquad  & \quad &
+\mat{rrrrr}
+1 & 4 & 5 & -9 & -7 \\
+0 & 2 & 4 & -6 & -6 \\
+0 & 5 & 10 & -15 & -15 \\
+0 & -3 & -6 & 4 & 9 
+\rix \\
+& \qquad   & \quad &
+\mat{rrrrr}
+1 & 4 & 5 & -9 & -7 \\
+0 & 2 & 4 & -6 & -6 \\
+0 & 0 & 0 & 0 & 0 \\
+0 & -3 & -6 & 4 & 9 
+\rix \\
+& \qquad  & \quad &
+\mat{rrrrr}
+1 & 4 & 5 & -9 & -7 \\
+0 & 2 & 4 & -6 & -6 \\
+0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & -5 & 0 
+\rix \\
+& \qquad & \quad &
+\mat{rrrrr}
+\colorbox{magenta!20}{1} & 4 & 5 & -9 & -7 \\
+0 & \colorbox{magenta!20}{2} & 4 & -6 & -6 \\
+0 & 0 & 0 & \colorbox{magenta!20}{-5} & 0 \\
+0 & 0 & 0 & 0 & 0 \\
+\rix
+\end{align*}
 </div>
 
-<p>By <a href="#def-tag1" class="ref"></a>,then </p>
 
-<div class="definition" data-title="(test)">
-A definition here
+
+<div class="example">
+Reduce the matrix to its \RREF:
+$\mat{rrrrrr}
+0 & 3 & -6 & 6 & 4 & -5 \\
+3 & -7 & 8 & -5 & 8 & 9 \\
+3 & -9 & 12 & -9 & 6 & 15
+\rix$
+\begin{align*}
+& \text{Step 2: Pivot at } (1,1)
+& \quad R_1 \leftrightarrow R_3 & \qquad 
+\mat{rrrrrr}
+\circled{3} & -9 & 12 & -9 & 6 & 15 \\
+3 & -7 & 8 & -5 & 8 & 9 \\
+0 & 3 & -6 & 6 & 4 & -5
+\rix \\
+& \text{Step 3: Row ops.} 
+& \quad R_2 \leftarrow R_2 - R_1 & \qquad 
+\mat{rrrrrr}
+\circled{3} & -9 & 12 & -9 & 6 & 15 \\
+0 & 2 & -4 & 4 & 2 & -6 \\
+0 & 3 & -6 & 6 & 4 & -5
+\rix \\ 
+& \text{Step 4: Ignore Row 1, pivot at } (2,2)
+& \quad & \qquad 
+\mat{rrrrrr}
+\rowcolor{green!15} 3 & -9 & 12 & -9 & 6 & 15 \\
+0 & \circled{2} & -4 & 4 & 2 & -6 \\
+0 & 3 & -6 & 6 & 4 & -5
+\rix \\
+& \text{Step 3: Row ops. }
+& \quad R_3 \leftarrow R_3 - \frac{3}{2} R_2 & \qquad 
+\mat{rrrrrr}
+\rowcolor{green!15}3 & -9 & 12 & -9 & 6 & 15 \\
+\rowcolor{green!15}0 & \circled{2} & -4 & 4 & 2 & -6 \\
+0 & 0 & 0 & 0 & 1 & 4
+\rix
+\end{align*}
+Continue on your own, finding the $\RREF$.
+</div>
+
+
+
+
+<p class="no-indent"> Applying these row reduction steps to the augmented matrix of a linear system allows us to <i>explicitly describe</i> the solution set.</p>
+
+<div class="definition" data-title="Basic and Free Variables">
+<ul>
+<li>Variables that correspond to pivot columns are called <i>basic variables</i>.</li>
+<li>Variables that correspond to columns without a pivot are called <i>free variables</i> or <i>nonbasic variables</i>.</li>
+</ul>
 </div>
 
 <div class="example">
-A example here
+Consider this linear system and its corresponding augmented matrix in $\RREF$:
+\[
+\begin{array}{rcrcrcrc}
+x_1 & &   &-& 5x_3 &=& 1 \\
+& &x_2 &+& x_3 &=& 4 \\
+&&  && 0 &=& 0 
+\end{array}
+\qquad \qquad 
+\mat{ccr|c}
+1 & 0 & -5 & 1 \\
+0 & 1 & 1 & 4 \\
+0 & 0 & 0 & 0
+\rix
+.\] 
+Because columns 1 and 2 have pivots, and column 3 does not, then
+\[
+x_1 \text{ and } x_2: \hspace{8em} \qquad x_3: \hspace{9em}
+.\] 
+Now, we can solve for the \textit{basic} variables in terms of the \textit{free} variables:
+\[
+\begin{array}{rcrcrcrc}
+x_1 & &   &-& 5x_3 &=& 1 \\
+& &x_2 &+& x_3 &=& 4 \\
+&&  && 0 &=& 0 
+\end{array} 
+\qquad \longrightarrow \qquad
+\hspace{10em}
+\] 
+So, the system is:
 </div>
 
-<div class="lemma">
-A lemma here
-</div>
 
-<div class="result">
-A result here
+
+<div class="basicbox">
+<b>Warning!</b> Only use the <b>reduced</b> row echelon form ($\RREF$) to solve a system!
+</br>
+(Just the $\REF$ is insufficient!)
 </div>
 
 <div class="example">
-A example here
-</div> -->
+Find the solution to the system whose augmented matrix has a \REF of:
+\[
+\mat{rrrrr|r}
+1 & 6 & 2 & -5 & -2 & -4 \\
+0 & 0 & 2 & -8 & -1 & 3 \\
+0 & 0 & 0 & 0 & 1 & 7
+\rix
+.\] 
+We begin by row reducing further to get the \RREF:
+
+
+
+Basic columns are:    Nonbasic columns are: 
+
+The \RREF gives the following system of equations:
+
+
+
+The basic variables in terms of the free variables are:
+\begin{align*}
+x_1 & = \hspace{30em} \\[0.5em]
+x_2 & =  \\[0.5em]
+x_3 & =  \\[0.5em]
+x_4 & =  \\[0.5em]
+x_5 &= 
+\end{align*}
+</div>
+
+
+
+<p class="no-indent">Even though the \REF is insufficient to <i>solve</i> a linear system, it does answer if the system is <i>consistent</li> or not (and, how many solutions there are, if any).</p>
+
+<div class="example">
+Determine the existence and uniqueness of solutions to the systems with augmented matrices:
+$
+\mat{rrrrr|r}
+3 & -9 & 12 & -9 & 6 & 15 \\
+0 & 2 & -4 & 4 & 2 & -6 \\
+0 & 0 & 0 & 0 & 1 & 4 
+\rix
+$
+
+$
+\mat{cc|r}
+3 & 4 & -3 \\
+0 & 1 & 3 \\
+0 & 0 & 0
+\rix
+$
+</div>
+
+
+
+
+
+<div class="theorem" data-title="Existence and Uniqueness Theorem" id="exist-unique-thm">
+A linear system is <i>consistent</i> (i.e., has solutions) if and only if the rightmost column of the augmented matrix is not a pivot column, i.e., if and only if any echelon form of its augmented matrix does not contain a row of the form
+\[
+\mat{ccc|c} 0 & \dots & 0 & c \rix, \qquad \text{where } c \neq 0
+.\]
+If a linear system is consistent, then the solution set contains either:
+<ol>
+<li>a unique solution, if there are no free variables;</li>
+<li>infinitely many solutions, if there is at least one free variable.</li>
+</ol>
+</div>
+
+
+<p class="no-indent"> Suppose a linear system is consistent. To determine if there is a unique solution, what must be true about the pivot locations? Does every row need a pivot? Does every column need a pivot?
+</br>
+Think about it!
+</p>
+
+<p class="no-indent"> In summary: To solve a linear system, use the following procedure.
+
+
+<div class="basicbox">
+<b>Solving a Linear System via Row Reduction:</b>
+<ol>
+<li>Write the augmented matrix of the system.</li>
+<li>Obtain the \REF of the augmented matrix.
+<ul>
+<li>If a row of $\mat{ccc|c} 0 & \dots & 0 & c \rix$ where $c\neq 0$ is encountered, stop. There are no solutions.</li>
+<li>Otherwise, continue.</li>
+</ul>
+</li>
+<li>Continuing row reducing to obtain the \RREF.</li>
+<li>Write the system of equations obtained from the \RREF.</li>
+<li>Rewrite each equation so that its basic variable is in terms of any free variables.</li>
+</ol>
+</div>
+
+
+<div class="example">
+Answer the following. Be sure that you can fully explain your work!
+<ol>
+<li>What is the largest possible number of pivots a $4\times 6$ matrix can have?</li>
+
+<li>What is the largest possible number of pivots a $6\times 4$ matrix can have?</li>
+
+<li>A consistent linear system has $3$ equations and $4$ unknowns. How many solutions does it have?</li>
+
+<li>Suppose the coefficient matrix corresponding to a linear system is $4\times 6$ with $3$ pivot columns. How many pivot columns does the augmented matrix have, if the linear system is inconsistent?</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
 
 </article>
 </main>
