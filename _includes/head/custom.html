@@ -84,13 +84,6 @@
     \let\impliedby\Leftarrow
     \let\iff\Leftrightarrow
     \renewcommand{\epsilon}{\varepsilon}
-    \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
-    \DeclarePairedDelimiter{\norm}{\Vert}{\Vert}
-    \DeclarePairedDelimiter{\vect}{\langle}{\rangle}
-    \DeclarePairedDelimiter\cbr{\{}{\}}
-    \DeclarePairedDelimiter{\pbr}{(}{)}
-    \DeclarePairedDelimiterX{\sbr}[1][]{#1}
-    \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
     \newcommand{\REF}{\text{REF}}
     \newcommand{\RREF}{\text{RREF}}
 </script>
@@ -136,6 +129,11 @@
         cX: '\\mathcal{X}',
         cY: '\\mathcal{Y}',
         cZ: '\\mathcal{Z}',
+        pbr: ['\\left( #1 \\right)',1],
+        cbr: ['\\left\\{ #1 \\right\\}',1],
+        sbr: ['\\left[ #1 \\right]',1],
+        abs: ['\\left\\lvert #1 \\right\\rvert',1],
+        norm: ['\\left\\lVert #1 \\right\\rVert',1],
         mat: ['\\left[\\begin{array}{#1}',1],
         rix: ['\\end{array}\\right]'],
         vmat: ['\\left\\lvert\\begin{array}{#1}',1],
