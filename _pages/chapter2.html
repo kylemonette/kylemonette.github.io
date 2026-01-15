@@ -17,6 +17,21 @@ author_profile: false
     .author {
         font-size: 1.5em;
     }
+    .theorem, .definition, .lemma {
+        counter-increment: theorem-counter;
+    }
+    .theorem::before {
+        content: "Theorem " counter(theorem-counter) ". ";
+        font-weight: bold;
+    }
+    .definition::before {
+        content: "Definition " counter(theorem-counter) ". ";
+        font-weight: bold;
+    }
+    .lemma::before {
+        content: "Lemma " counter(theorem-counter) ". ";
+        font-weight: bold;
+    }
 </style>
 </head>
 
