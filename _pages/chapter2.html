@@ -13,15 +13,16 @@ author_profile: false
         background-color: #ffffff;
         box-shadow: none;
         border: none;
+        counter-reset: theorem-counter;
     }
     .author {
         font-size: 1.5em;
     }
-    .theorem, .definition, .lemma {
+    .theorem, .definition, .lemma, .example, .proposition, .result {
         counter-increment: theorem-counter;
     }
     .theorem::before {
-        content: "Theorem " counter(theorem-counter) ". ";
+        content: "Theorem " counter(theorem-counter) attr(data-title) ". ";
         font-weight: bold;
     }
     .definition::before {
@@ -30,6 +31,18 @@ author_profile: false
     }
     .lemma::before {
         content: "Lemma " counter(theorem-counter) ". ";
+        font-weight: bold;
+    }
+    .example::before {
+        content: "Example " counter(theorem-counter) ". ";
+        font-weight: bold;
+    }
+    .proposition::before {
+        content: "Proposition " counter(theorem-counter) ". ";
+        font-weight: bold;
+    }
+    .result::before {
+        content: "Result " counter(theorem-counter) ". ";
         font-weight: bold;
     }
 </style>
@@ -70,8 +83,32 @@ author_profile: false
 Testing
 </div>
 
+<div class="theorem" data-title="numbers">
+Testing
+</div>
+
 <div class="definition">
 A definition here
+</div>
+
+<div class="example">
+A example here
+</div>
+
+<div class="lemma">
+A lemma here
+</div>
+
+<div class="result">
+A result here
+</div>
+
+<div class="example">
+A example here
+</div>
+
+<div class="result">
+A result here
 </div>
 
 <p>
