@@ -1,0 +1,40 @@
+\documentclass{standalone}
+
+\usepackage{tikz,pgfplots}
+
+\pgfplotsset{compat=1.18}
+\pgfplotsset{
+	soldot/.style={
+		color=black,only marks,mark=*},
+	holdot/.style={
+		color=black,fill=white,only marks,mark=*},
+	compat=1.12,
+	standard/.style={
+     		every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+    		every axis y label/.style={at={(current axis.above origin)},anchor=north east}}
+}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta}
+\tikzset{>={Latex[scale=1.2]}}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[grid=none,
+axis lines=middle,
+xmin=-4,xmax=4,
+ymin=-2,ymax=3,
+xtick=\empty,
+ytick=\empty,
+minor tick={},
+xlabel=\(x_1\), ylabel=\(x_2\),
+samples=250]
+\addplot[domain=-4:4 ,thick] {(-1-x)/-2} node[pos=0.2,below,sloped] {$L_1$};
+\addplot[domain=-4:4,thick] {(1+x)/2} node[pos=0.2,above,sloped] {$L_2$};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
