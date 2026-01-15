@@ -388,57 +388,42 @@ $\mat{rrr|r}
 </tr>
 </table>
 
-<p>Therefore, \textit{testing}.</p>
 <!-- $3\times 3$ & $3\times 4$ & \quad $2\times 2$ & \quad $2\times 4$  -->
 
-
-<!-- \noindent Therefore, a system of $m$ equations with $n$ unknowns is associated to:
-
-\begin{itemize}
-\item a coefficient matrix of size: \quad \sol{$m\times n$} 
-\vspace{1em}
-\item an augmented matrix of size: \quad \sol{$m\times (n+1)$}
-\end{itemize} 
+<p class="no-indent">Therefore, a system of $m$ equations with $n$ unknowns is associated to:</br>
+<ol>
+<li>a coefficient matrix of size: \sol{$m\times n$}</li>
+<li>an augmented matrix of size: \sol{$m\times (n+1)$}</li>
+</ol>
 
 
-% \noindent For example, this coefficient matrix is $3\times 3$, the augmented matrix is $3\times 4$. In general, an ``$m \times n$'' matrix has $m$ rows and $n$ columns. Order matters!
-
-\vspace{4em}
+<p class="no-indent">For example, this coefficient matrix is $3\times 3$, the augmented matrix is $3\times 4$. In general, an $m \times n$ matrix has $m$ rows and $n$ columns. Order matters!</p>
 
 
-\noindent {\bf Solving a linear system:} \quad To solve a linear system, create the augmented matrix. Our goal is to convert this matrix to an {\it equivalent system} (so, not changing the solution set) which is easier to solve.
+<p class="no-indent"><b>Solving a linear system:</b>
+To solve a linear system, create the augmented matrix. Our goal is to convert this matrix to an <i>equivalent system</i> (so, not changing the solution set) which is easier to solve.
+</p>
 
-\bigskip
+<div class="basicbox">
+<b>Elementary Row Operations:</b>
+<ol>
+<li>(Replacement) Replace one row by the sum of that row and a multiple of another.</br><i>That is, add to one row a multiple of another row.</i></li>
+<li>(Interchange) Interchange two rows.</li>
+<li>(Scaling) Multiply a row by a nonzero constant.</li>
+</ol>
+</div>
 
-\basicbox
-{\bf Elementary Row Operations:}
+<div class="proposition">
+Any combination of elementary row operations applied to any augmented matrix creates a new augmented matrix that is <b>row equivalent</b> to the original, thus preserving the solution set.
+</div>
 
-\begin{enumerate}
-\item (Replacement) Replace one row by the sum of that row and a multiple of another.
-
-\hspace{6em} {\it That is, add to one row a multiple of another row.}
-
-\item (Interchange) Interchange two rows.
-\item (Scaling) Multiply a row by a nonzero constant.
-\end{enumerate}
-\overbox
-
-\medskip
-
-\prop
-Any combination of elementary row operations applied to any augmented matrix creates a new augmented matrix that is {\bf row equivalent} to the original, thus preserving the solution set.
-\overprop
-
-
-\begin{instructor}
+<!-- \begin{instructor}
 What row operations are used? Ones that convert the system to a \textit{triangular form} like the one above.
-\end{instructor} 
+\end{instructor}  -->
 
 
-\newpage
 
-
-\noindent
+<!-- \noindent
 \begin{minipage}[t]{0.7\textwidth}
 \noindent
 \scalebox{0.8}{
@@ -473,10 +458,10 @@ $\mat{ccccc|c}
 \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
 \rix$
 \overbox}
-\end{minipage} 
+\end{minipage}  -->
 
 
-\exm
+<div class="example">
 Solve the system of linear equations by forming the augmented matrix and performing row operations.
 \[
 \begin{array}{rcrcr}
@@ -515,14 +500,9 @@ Solve the system of linear equations by forming the augmented matrix and perform
 \rix }\\[\ifprintsol0em\else3em\fi] 
 \end{align*}
 The solution is then $(x_1, x_2) = \sol{(3,-4)}$
-\overexm
+</div>
 
-
-
-\newpage
-
-
-\exm
+<div class="example">
 Solve the system of linear equations.
 \[
 \begin{array}{ccccccc}
@@ -560,9 +540,9 @@ Start by forming the augmented matrix, and performing row operations:
 \rix} \ifprintsol \else \\[4em] \fi
 \end{align*}
 
-Is the system \textit{consistent}?
+Is the system <i>consistent</i>?
 
-\begin{instructor}
+<!-- \begin{instructor}
 Converting back to the equation form,
 \[
 \begin{array}{ccccccl}
@@ -572,15 +552,11 @@ Converting back to the equation form,
 \end{array} 
 \] 
 No Solution! System is \textbf{inconsistent}.
-\end{instructor}
+\end{instructor} -->
+</div>
 
-\overexm
-
-
-
-\newpage
-
-\exm Solve the linear system whose augmented matrix is
+<div class="example">
+Solve the linear system whose augmented matrix is
 \quad $\mat{crr|c}
 1 & -2 & 1 & 0 \\
 0 & 2 & -8 & 8 \\
@@ -638,16 +614,9 @@ No Solution! System is \textbf{inconsistent}.
 \end{align*}
 
 The solution is then $(x_1, x_2, x_3) = \sol{(1,0,-1)}$
-\overexm
+</div>
 
-
-
-
-
-\newpage
-
-
-\exm
+<div class="example">
 For what values of $h$ is the system consistent? For those values of $h$, how many solutions are there?
 \[
 \begin{array}{rcccc}
@@ -659,7 +628,7 @@ For what values of $h$ is the system consistent? For those values of $h$, how ma
 
 Start by row reducing the augmented matrix to a triangular form:
 
-\begin{instructor}
+<!-- \begin{instructor}
 \[
 \mat{rr|r}
 3 & -9 & 4 \\
@@ -692,6 +661,7 @@ So when $h= -\frac{8}{3}$ there are infinitely many solutions!
 
 \end{instructor} -->
 
+</div>
 
 
 
