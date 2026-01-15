@@ -20,6 +20,7 @@ author_profile: false
     }
     .theorem, .definition, .lemma, .example, .proposition, .result {
         counter-increment: theorem-counter;
+        font-style: normal;
     }
     .theorem::before {
         content: "Theorem " counter(theorem-counter) ".";
